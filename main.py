@@ -5,6 +5,7 @@ import Logger
 import Strategy
 import time
 import sys
+import AI.Model as Model
 import Run
 class main(object):
     def __init__(self):
@@ -23,7 +24,7 @@ class main(object):
         Logger.Log('Connection succesfull')
         """
         train 2:[pair] 3:[structuur or filename or none]
-        create [structuur] [filename]
+        create [filename] [structuur]
         run [pair] [filename]
         simulate [pair] [filename]
         """
@@ -31,7 +32,11 @@ class main(object):
         if sys.argv[1] == 'train':
             strategy = Strategy.Strategy(symbol=sys.argv[2],binance_client=client)
         elif sys.argv[1] == 'create':
-            pass
+            config = [int(sys.argv[i]) for i in range(3,len(sys.argv))]
+            model = Model.Model()
+            Logger.Log("Creating network with model config as first layer:"+str(config[0]))
+            model.network_config = config
+            model.save(filename=sys.argv[2])
         elif sys.argv[1] == 'run':
             pass
         elif sys.argv[1] == 'simulate':
