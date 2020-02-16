@@ -1,0 +1,41 @@
+(2020-02-03 21:20:56.994643) | Strategy init with wallet: BNBUSDT
+(2020-02-03 21:20:56.995644) | Interval that is fed to network has length: 2
+(2020-02-03 21:20:56.998321) | Neuron initiated with id 0 in layer 0
+(2020-02-03 21:20:56.999318) | Neuron initiated with id 1 in layer 0
+(2020-02-03 21:20:57.000316) | Neuron initiated with id 0 in layer 1
+(2020-02-03 21:20:57.001795) | Assigned random weights
+(2020-02-03 21:20:57.014738) | Loading in model line: ['1', '0', '[2.3514906984286124,1.2668152]', '-0.0006400000000000004']
+(2020-02-03 21:20:58.806487) | -8.766798948655133
+(2020-02-03 21:20:58.807024) | Starting fitness of network is: -8.766799
+(2020-02-03 21:20:58.810632) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-02-03 21:20:58.817341) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-02-03 21:20:58.818338) | Neuron 0 in layer: 1 has weights and bias[2.3514906984286124, 1.266815] bias: -0.0006400000000000004
+MODEL PRINT RESULT
+(2020-02-03 21:20:58.820335) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-02-03 21:20:58.821329) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-02-03 21:20:58.822327) | Neuron 0 in layer: 1 has weights and bias[2.3514906984286124, 1.266815] bias: -0.0006400000000000004
+MODEL PRINT RESULT
+(2020-02-03 21:20:58.849041) | -8.766798948655133
+(2020-02-03 21:20:58.861384) | -8.766798948655133
+[0.0, 0.0]
+(2020-02-03 21:20:58.863628) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-02-03 21:20:58.873823) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-02-03 21:20:58.876637) | Neuron 0 in layer: 1 has weights and bias[2.3514906984286124, 1.266815] bias: -0.0006400000000000004
+MODEL PRINT RESULT
+(2020-02-03 21:20:58.886015) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-02-03 21:20:58.892186) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-02-03 21:20:58.896169) | Neuron 0 in layer: 1 has weights and bias[2.3514906984286124, 1.266815] bias: -0.0006400000000000004
+MODEL PRINT RESULT
+(2020-02-03 21:20:58.929105) | -8.766798948655133
+(2020-02-03 21:20:58.952059) | -8.766798948655133
+[0.0, 0.0]
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 32, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 73, in train
+    self.model.layers[maxdir_tup[0]].neurons[maxdir_tup[1]].weights[maxdir_tup[2]] +=accuracy
+TypeError: 'NoneType' object is not subscriptable

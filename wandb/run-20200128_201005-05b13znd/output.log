@@ -1,0 +1,17 @@
+(2020-01-28 21:10:09.258521) | Strategy init with wallet: BNBUSDT
+(2020-01-28 21:10:09.259803) | Interval that is fed to network has length: 1
+(2020-01-28 21:10:09.259803) | Neuron initiated with id 0 in layer 0
+(2020-01-28 21:10:09.259803) | Neuron initiated with id 0 in layer 1
+(2020-01-28 21:10:09.259803) | Assigned random weights
+(2020-01-28 21:10:09.260800) | Loading in model line: ['1', '0', '[-0.7428792401812557,-0.429498131771462,-0.47475256335683996,-0.2764733524167379,-0.9992039979304069,-0.2624711159407237,-0.9923173687947884,-0.20808342054107615,-0.433586208924355]', '0.0']
+(2020-01-28 21:10:09.260800) | Loading in model line: ['1', '1', '[0.9987429255121478,-0.00893972023805466,0.5674489830318502,0.49291813540597523,0.7491572794383679,0.4609529116491441,0.6512859436944626,0.26148554835728527,0.68834710385]', '0.0']
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    start = main()
+  File "main.py", line 23, in __init__
+    strategy = Strategy.Strategy(wallet,binance_client=client)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 24, in __init__
+    self.model.load()
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 72, in load
+    self.layers[int(data[0])].neurons[int(data[1])].weights = weights
+IndexError: list index out of range

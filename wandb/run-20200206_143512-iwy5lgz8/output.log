@@ -1,0 +1,62 @@
+(2020-02-06 15:35:22.427163) | Strategy init with wallet: BNBUSDT
+(2020-02-06 15:35:22.427163) | Interval that is fed to network has length: 2
+(2020-02-06 15:35:22.428164) | Neuron initiated with id 0 in layer 0
+(2020-02-06 15:35:22.428164) | Neuron initiated with id 1 in layer 0
+(2020-02-06 15:35:22.428164) | Neuron initiated with id 0 in layer 1
+(2020-02-06 15:35:22.428164) | Neuron initiated with id 1 in layer 1
+(2020-02-06 15:35:22.429157) | Neuron initiated with id 0 in layer 2
+(2020-02-06 15:35:22.429157) | Assigned random weights
+(2020-02-06 15:35:22.429727) | Loading in model line: ['1', '0', '[0.15199579908104655,0.07316665458788041,0.09015992023752423,0.34280970157356583,0.456895452333432]', '0']
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    start = main()
+  File "main.py", line 34, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 31, in __init__
+    data = self.get_data(binance_client=binance_client)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 95, in get_data
+    data = binance_client.get_historical_klines(self.wallet.symbol,klineinterval,'28 Januari, 2019','4 februari, 2019')
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\binance\client.py", line 780, in get_historical_klines
+    first_valid_ts = self._get_earliest_valid_timestamp(symbol, interval)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\binance\client.py", line 738, in _get_earliest_valid_timestamp
+    endTime=None
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\binance\client.py", line 720, in get_klines
+    return self._get('klines', data=params)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\binance\client.py", line 222, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\binance\client.py", line 191, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\binance\client.py", line 185, in _request
+    self.response = getattr(self.session, method)(uri, **kwargs)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\requests\sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 1336, in getresponse
+    response.begin()
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\http\client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\urllib3\contrib\pyopenssl.py", line 325, in recv_into
+    if not util.wait_for_read(self.socket, self.socket.gettimeout()):
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\urllib3\util\wait.py", line 146, in wait_for_read
+    return wait_for_socket(sock, read=True, timeout=timeout)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\urllib3\util\wait.py", line 86, in select_wait_for_socket
+    rready, wready, xready = _retry_on_intr(fn, timeout)
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\urllib3\util\wait.py", line 43, in _retry_on_intr
+    return fn(timeout)
+KeyboardInterrupt

@@ -1,0 +1,20 @@
+(2020-02-06 18:42:29.043086) | Strategy init with wallet: BNBUSDT
+(2020-02-06 18:42:29.043086) | Interval that is fed to network has length: 5
+(2020-02-06 18:42:29.044112) | Neuron initiated with id 0 in layer 0
+(2020-02-06 18:42:29.044112) | Neuron initiated with id 1 in layer 0
+(2020-02-06 18:42:29.044112) | Neuron initiated with id 0 in layer 1
+(2020-02-06 18:42:29.044112) | Assigned random weights
+(2020-02-06 18:42:30.353546) | Starting fitness of network is: -1.859131
+-0.00119426954672619 -1.8579364342322193
+Traceback (most recent call last):
+  File "main.py", line 55, in <module>
+    start = main()
+  File "main.py", line 36, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet,network_structure=netwerk)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 36, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 81, in train
+    self.model.save(filename=str(sys.argv[2:])+'.model')
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 79, in save
+    structure+=len(l)+'/'
+TypeError: object of type 'Layer' has no len()

@@ -1,0 +1,161 @@
+(2020-02-03 21:43:42.188851) | Strategy init with wallet: BNBUSDT
+(2020-02-03 21:43:42.191507) | Interval that is fed to network has length: 2
+(2020-02-03 21:43:42.191507) | Neuron initiated with id 0 in layer 0
+(2020-02-03 21:43:42.191507) | Neuron initiated with id 1 in layer 0
+(2020-02-03 21:43:42.192505) | Neuron initiated with id 0 in layer 1
+(2020-02-03 21:43:42.192673) | Assigned random weights
+(2020-02-03 21:43:42.192673) | Loading in model line: ['1', '0', '[-0.36429539154166013,-0.0029020201036]', '0.0']
+(2020-02-03 21:43:43.942491) | Starting fitness of network is: -3.169002
+(2020-02-03 21:43:44.050961) | saved network succesfully
+(2020-02-03 21:43:44.161658) | saved network succesfully
+(2020-02-03 21:43:44.223624) | saved network succesfully
+(2020-02-03 21:43:44.300491) | saved network succesfully
+(2020-02-03 21:43:44.362546) | saved network succesfully
+(2020-02-03 21:43:44.408163) | saved network succesfully
+(2020-02-03 21:43:44.483840) | saved network succesfully
+(2020-02-03 21:43:44.544668) | saved network succesfully
+(2020-02-03 21:43:44.600158) | saved network succesfully
+(2020-02-03 21:43:44.685321) | saved network succesfully
+(2020-02-03 21:43:44.747620) | saved network succesfully
+(2020-02-03 21:43:44.803091) | saved network succesfully
+(2020-02-03 21:43:44.888883) | saved network succesfully
+(2020-02-03 21:43:44.952347) | saved network succesfully
+(2020-02-03 21:43:45.043653) | saved network succesfully
+(2020-02-03 21:43:45.133905) | saved network succesfully
+(2020-02-03 21:43:45.252749) | saved network succesfully
+(2020-02-03 21:43:45.333259) | saved network succesfully
+(2020-02-03 21:43:45.400578) | saved network succesfully
+(2020-02-03 21:43:45.477857) | saved network succesfully
+(2020-02-03 21:43:45.557531) | saved network succesfully
+(2020-02-03 21:43:45.634925) | saved network succesfully
+(2020-02-03 21:43:45.692425) | saved network succesfully
+(2020-02-03 21:43:45.743024) | saved network succesfully
+(2020-02-03 21:43:45.813995) | saved network succesfully
+(2020-02-03 21:43:45.866062) | saved network succesfully
+(2020-02-03 21:43:45.913888) | saved network succesfully
+(2020-02-03 21:43:45.997796) | saved network succesfully
+(2020-02-03 21:43:46.071360) | saved network succesfully
+(2020-02-03 21:43:46.160356) | saved network succesfully
+(2020-02-03 21:43:46.241456) | saved network succesfully
+(2020-02-03 21:43:46.317756) | saved network succesfully
+(2020-02-03 21:43:46.395360) | saved network succesfully
+(2020-02-03 21:43:46.467948) | saved network succesfully
+(2020-02-03 21:43:46.546445) | saved network succesfully
+(2020-02-03 21:43:46.612811) | saved network succesfully
+(2020-02-03 21:43:46.673624) | saved network succesfully
+(2020-02-03 21:43:46.744827) | saved network succesfully
+(2020-02-03 21:43:46.834143) | saved network succesfully
+(2020-02-03 21:43:46.904659) | saved network succesfully
+(2020-02-03 21:43:46.981667) | saved network succesfully
+(2020-02-03 21:43:47.074006) | saved network succesfully
+(2020-02-03 21:43:47.178889) | saved network succesfully
+(2020-02-03 21:43:47.286389) | saved network succesfully
+(2020-02-03 21:43:47.383302) | saved network succesfully
+(2020-02-03 21:43:47.464285) | saved network succesfully
+(2020-02-03 21:43:47.563988) | saved network succesfully
+(2020-02-03 21:43:47.629816) | saved network succesfully
+(2020-02-03 21:43:47.707194) | saved network succesfully
+(2020-02-03 21:43:47.788379) | saved network succesfully
+(2020-02-03 21:43:47.854069) | saved network succesfully
+(2020-02-03 21:43:47.918216) | saved network succesfully
+(2020-02-03 21:43:47.971851) | saved network succesfully
+(2020-02-03 21:43:48.037142) | saved network succesfully
+(2020-02-03 21:43:48.096584) | saved network succesfully
+(2020-02-03 21:43:48.175432) | saved network succesfully
+(2020-02-03 21:43:48.232449) | saved network succesfully
+(2020-02-03 21:43:48.307495) | saved network succesfully
+(2020-02-03 21:43:48.368183) | saved network succesfully
+(2020-02-03 21:43:48.465679) | saved network succesfully
+(2020-02-03 21:43:48.518660) | saved network succesfully
+(2020-02-03 21:43:48.592532) | saved network succesfully
+(2020-02-03 21:43:48.675357) | saved network succesfully
+(2020-02-03 21:43:48.757872) | saved network succesfully
+(2020-02-03 21:43:48.861604) | saved network succesfully
+(2020-02-03 21:43:48.951026) | saved network succesfully
+(2020-02-03 21:43:49.044098) | saved network succesfully
+(2020-02-03 21:43:49.115512) | saved network succesfully
+(2020-02-03 21:43:49.201436) | saved network succesfully
+(2020-02-03 21:43:49.321024) | saved network succesfully
+(2020-02-03 21:43:49.373754) | saved network succesfully
+(2020-02-03 21:43:49.443854) | saved network succesfully
+(2020-02-03 21:43:49.502302) | saved network succesfully
+(2020-02-03 21:43:49.558864) | saved network succesfully
+(2020-02-03 21:43:49.630579) | saved network succesfully
+(2020-02-03 21:43:49.738815) | saved network succesfully
+(2020-02-03 21:43:49.792733) | saved network succesfully
+(2020-02-03 21:43:49.885888) | saved network succesfully
+(2020-02-03 21:43:49.982806) | saved network succesfully
+(2020-02-03 21:43:50.061721) | saved network succesfully
+(2020-02-03 21:43:50.136006) | saved network succesfully
+(2020-02-03 21:43:50.225097) | saved network succesfully
+(2020-02-03 21:43:50.309007) | saved network succesfully
+(2020-02-03 21:43:50.376706) | saved network succesfully
+(2020-02-03 21:43:50.438943) | saved network succesfully
+(2020-02-03 21:43:50.504638) | saved network succesfully
+(2020-02-03 21:43:50.559772) | saved network succesfully
+(2020-02-03 21:43:50.614899) | saved network succesfully
+(2020-02-03 21:43:50.665376) | saved network succesfully
+(2020-02-03 21:43:50.719268) | saved network succesfully
+(2020-02-03 21:43:50.767852) | saved network succesfully
+(2020-02-03 21:43:50.832863) | saved network succesfully
+(2020-02-03 21:43:50.890563) | saved network succesfully
+(2020-02-03 21:43:50.960879) | saved network succesfully
+(2020-02-03 21:43:51.048168) | saved network succesfully
+(2020-02-03 21:43:51.142994) | saved network succesfully
+(2020-02-03 21:43:51.229275) | saved network succesfully
+(2020-02-03 21:43:51.288410) | saved network succesfully
+(2020-02-03 21:43:51.351364) | saved network succesfully
+(2020-02-03 21:43:51.444844) | saved network succesfully
+(2020-02-03 21:43:51.542986) | saved network succesfully
+(2020-02-03 21:43:51.602532) | saved network succesfully
+(2020-02-03 21:43:51.657913) | saved network succesfully
+(2020-02-03 21:43:51.716270) | saved network succesfully
+(2020-02-03 21:43:51.778977) | saved network succesfully
+(2020-02-03 21:43:51.831736) | saved network succesfully
+(2020-02-03 21:43:51.884855) | saved network succesfully
+(2020-02-03 21:43:51.944105) | saved network succesfully
+(2020-02-03 21:43:52.005152) | saved network succesfully
+(2020-02-03 21:43:52.060548) | saved network succesfully
+(2020-02-03 21:43:52.112407) | saved network succesfully
+(2020-02-03 21:43:52.182895) | saved network succesfully
+(2020-02-03 21:43:52.253573) | saved network succesfully
+(2020-02-03 21:43:52.302732) | saved network succesfully
+(2020-02-03 21:43:52.351338) | saved network succesfully
+(2020-02-03 21:43:52.401495) | saved network succesfully
+(2020-02-03 21:43:52.450654) | saved network succesfully
+(2020-02-03 21:43:52.513750) | saved network succesfully
+(2020-02-03 21:43:52.580326) | saved network succesfully
+(2020-02-03 21:43:52.653343) | saved network succesfully
+(2020-02-03 21:43:52.744164) | saved network succesfully
+(2020-02-03 21:43:52.846902) | saved network succesfully
+(2020-02-03 21:43:52.928677) | saved network succesfully
+(2020-02-03 21:43:52.993191) | saved network succesfully
+(2020-02-03 21:43:53.092377) | saved network succesfully
+(2020-02-03 21:43:53.183521) | saved network succesfully
+(2020-02-03 21:43:53.273541) | saved network succesfully
+(2020-02-03 21:43:53.351077) | saved network succesfully
+(2020-02-03 21:43:53.448206) | saved network succesfully
+(2020-02-03 21:43:53.534056) | saved network succesfully
+(2020-02-03 21:43:53.633316) | saved network succesfully
+(2020-02-03 21:43:53.682259) | saved network succesfully
+(2020-02-03 21:43:53.742483) | saved network succesfully
+(2020-02-03 21:43:53.845371) | saved network succesfully
+(2020-02-03 21:43:53.905880) | saved network succesfully
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 32, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 59, in train
+    dir_list = [fitness-eval(model) for model in model_list]
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 59, in <listcomp>
+    dir_list = [fitness-eval(model) for model in model_list]
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 45, in eval
+    fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 84, in run_over_data
+    afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 46, in predict
+    outputs = self.activation_function((weights@values)+biases)
+KeyboardInterrupt

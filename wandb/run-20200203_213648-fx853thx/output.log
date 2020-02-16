@@ -1,0 +1,220 @@
+(2020-02-03 22:36:51.036579) | Strategy init with wallet: BNBUSDT
+(2020-02-03 22:36:51.039236) | Interval that is fed to network has length: 128
+(2020-02-03 22:36:51.046703) | Neuron initiated with id 0 in layer 0
+(2020-02-03 22:36:51.046703) | Neuron initiated with id 1 in layer 0
+(2020-02-03 22:36:51.046703) | Neuron initiated with id 2 in layer 0
+(2020-02-03 22:36:51.046703) | Neuron initiated with id 3 in layer 0
+(2020-02-03 22:36:51.047700) | Neuron initiated with id 4 in layer 0
+(2020-02-03 22:36:51.047920) | Neuron initiated with id 5 in layer 0
+(2020-02-03 22:36:51.047920) | Neuron initiated with id 6 in layer 0
+(2020-02-03 22:36:51.047920) | Neuron initiated with id 7 in layer 0
+(2020-02-03 22:36:51.047920) | Neuron initiated with id 8 in layer 0
+(2020-02-03 22:36:51.047920) | Neuron initiated with id 9 in layer 0
+(2020-02-03 22:36:51.047920) | Neuron initiated with id 10 in layer 0
+(2020-02-03 22:36:51.047920) | Neuron initiated with id 11 in layer 0
+(2020-02-03 22:36:51.049054) | Neuron initiated with id 12 in layer 0
+(2020-02-03 22:36:51.049054) | Neuron initiated with id 13 in layer 0
+(2020-02-03 22:36:51.049054) | Neuron initiated with id 14 in layer 0
+(2020-02-03 22:36:51.049054) | Neuron initiated with id 15 in layer 0
+(2020-02-03 22:36:51.049577) | Neuron initiated with id 16 in layer 0
+(2020-02-03 22:36:51.049577) | Neuron initiated with id 17 in layer 0
+(2020-02-03 22:36:51.049577) | Neuron initiated with id 18 in layer 0
+(2020-02-03 22:36:51.050194) | Neuron initiated with id 19 in layer 0
+(2020-02-03 22:36:51.050194) | Neuron initiated with id 20 in layer 0
+(2020-02-03 22:36:51.050194) | Neuron initiated with id 21 in layer 0
+(2020-02-03 22:36:51.050194) | Neuron initiated with id 22 in layer 0
+(2020-02-03 22:36:51.050194) | Neuron initiated with id 23 in layer 0
+(2020-02-03 22:36:51.050194) | Neuron initiated with id 24 in layer 0
+(2020-02-03 22:36:51.051190) | Neuron initiated with id 25 in layer 0
+(2020-02-03 22:36:51.051409) | Neuron initiated with id 26 in layer 0
+(2020-02-03 22:36:51.051409) | Neuron initiated with id 27 in layer 0
+(2020-02-03 22:36:51.051409) | Neuron initiated with id 28 in layer 0
+(2020-02-03 22:36:51.051409) | Neuron initiated with id 29 in layer 0
+(2020-02-03 22:36:51.051409) | Neuron initiated with id 30 in layer 0
+(2020-02-03 22:36:51.051409) | Neuron initiated with id 31 in layer 0
+(2020-02-03 22:36:51.051409) | Neuron initiated with id 32 in layer 0
+(2020-02-03 22:36:51.052394) | Neuron initiated with id 33 in layer 0
+(2020-02-03 22:36:51.052573) | Neuron initiated with id 34 in layer 0
+(2020-02-03 22:36:51.052573) | Neuron initiated with id 35 in layer 0
+(2020-02-03 22:36:51.052573) | Neuron initiated with id 36 in layer 0
+(2020-02-03 22:36:51.052573) | Neuron initiated with id 37 in layer 0
+(2020-02-03 22:36:51.052573) | Neuron initiated with id 38 in layer 0
+(2020-02-03 22:36:51.052573) | Neuron initiated with id 39 in layer 0
+(2020-02-03 22:36:51.052573) | Neuron initiated with id 40 in layer 0
+(2020-02-03 22:36:51.052573) | Neuron initiated with id 41 in layer 0
+(2020-02-03 22:36:51.053571) | Neuron initiated with id 42 in layer 0
+(2020-02-03 22:36:51.053757) | Neuron initiated with id 43 in layer 0
+(2020-02-03 22:36:51.053757) | Neuron initiated with id 44 in layer 0
+(2020-02-03 22:36:51.053757) | Neuron initiated with id 45 in layer 0
+(2020-02-03 22:36:51.053757) | Neuron initiated with id 46 in layer 0
+(2020-02-03 22:36:51.053757) | Neuron initiated with id 47 in layer 0
+(2020-02-03 22:36:51.053757) | Neuron initiated with id 48 in layer 0
+(2020-02-03 22:36:51.053757) | Neuron initiated with id 49 in layer 0
+(2020-02-03 22:36:51.053757) | Neuron initiated with id 50 in layer 0
+(2020-02-03 22:36:51.054755) | Neuron initiated with id 51 in layer 0
+(2020-02-03 22:36:51.063161) | Neuron initiated with id 52 in layer 0
+(2020-02-03 22:36:51.063161) | Neuron initiated with id 53 in layer 0
+(2020-02-03 22:36:51.063161) | Neuron initiated with id 54 in layer 0
+(2020-02-03 22:36:51.063161) | Neuron initiated with id 55 in layer 0
+(2020-02-03 22:36:51.063161) | Neuron initiated with id 56 in layer 0
+(2020-02-03 22:36:51.063161) | Neuron initiated with id 57 in layer 0
+(2020-02-03 22:36:51.063161) | Neuron initiated with id 58 in layer 0
+(2020-02-03 22:36:51.064178) | Neuron initiated with id 59 in layer 0
+(2020-02-03 22:36:51.064178) | Neuron initiated with id 60 in layer 0
+(2020-02-03 22:36:51.064178) | Neuron initiated with id 61 in layer 0
+(2020-02-03 22:36:51.064178) | Neuron initiated with id 62 in layer 0
+(2020-02-03 22:36:51.064178) | Neuron initiated with id 63 in layer 0
+(2020-02-03 22:36:51.064178) | Neuron initiated with id 64 in layer 0
+(2020-02-03 22:36:51.065175) | Neuron initiated with id 65 in layer 0
+(2020-02-03 22:36:51.065230) | Neuron initiated with id 66 in layer 0
+(2020-02-03 22:36:51.065230) | Neuron initiated with id 67 in layer 0
+(2020-02-03 22:36:51.065230) | Neuron initiated with id 68 in layer 0
+(2020-02-03 22:36:51.065230) | Neuron initiated with id 69 in layer 0
+(2020-02-03 22:36:51.065230) | Neuron initiated with id 70 in layer 0
+(2020-02-03 22:36:51.065230) | Neuron initiated with id 71 in layer 0
+(2020-02-03 22:36:51.065230) | Neuron initiated with id 72 in layer 0
+(2020-02-03 22:36:51.066227) | Neuron initiated with id 73 in layer 0
+(2020-02-03 22:36:51.066227) | Neuron initiated with id 74 in layer 0
+(2020-02-03 22:36:51.066227) | Neuron initiated with id 75 in layer 0
+(2020-02-03 22:36:51.066227) | Neuron initiated with id 76 in layer 0
+(2020-02-03 22:36:51.066227) | Neuron initiated with id 77 in layer 0
+(2020-02-03 22:36:51.066227) | Neuron initiated with id 78 in layer 0
+(2020-02-03 22:36:51.066227) | Neuron initiated with id 79 in layer 0
+(2020-02-03 22:36:51.066227) | Neuron initiated with id 80 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 81 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 82 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 83 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 84 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 85 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 86 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 87 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 88 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 89 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 90 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 91 in layer 0
+(2020-02-03 22:36:51.067224) | Neuron initiated with id 92 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 93 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 94 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 95 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 96 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 97 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 98 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 99 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 100 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 101 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 102 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 103 in layer 0
+(2020-02-03 22:36:51.068221) | Neuron initiated with id 104 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 105 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 106 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 107 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 108 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 109 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 110 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 111 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 112 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 113 in layer 0
+(2020-02-03 22:36:51.069219) | Neuron initiated with id 114 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 115 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 116 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 117 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 118 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 119 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 120 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 121 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 122 in layer 0
+(2020-02-03 22:36:51.070216) | Neuron initiated with id 123 in layer 0
+(2020-02-03 22:36:51.071213) | Neuron initiated with id 124 in layer 0
+(2020-02-03 22:36:51.071213) | Neuron initiated with id 125 in layer 0
+(2020-02-03 22:36:51.071213) | Neuron initiated with id 126 in layer 0
+(2020-02-03 22:36:51.071213) | Neuron initiated with id 127 in layer 0
+(2020-02-03 22:36:51.071213) | Neuron initiated with id 0 in layer 1
+(2020-02-03 22:36:51.071213) | Neuron initiated with id 1 in layer 1
+(2020-02-03 22:36:51.071213) | Neuron initiated with id 2 in layer 1
+(2020-02-03 22:36:51.072226) | Neuron initiated with id 3 in layer 1
+(2020-02-03 22:36:51.072226) | Neuron initiated with id 4 in layer 1
+(2020-02-03 22:36:51.072226) | Neuron initiated with id 5 in layer 1
+(2020-02-03 22:36:51.072226) | Neuron initiated with id 6 in layer 1
+(2020-02-03 22:36:51.072226) | Neuron initiated with id 7 in layer 1
+(2020-02-03 22:36:51.072226) | Neuron initiated with id 8 in layer 1
+(2020-02-03 22:36:51.072226) | Neuron initiated with id 9 in layer 1
+(2020-02-03 22:36:51.073226) | Neuron initiated with id 10 in layer 1
+(2020-02-03 22:36:51.073312) | Neuron initiated with id 11 in layer 1
+(2020-02-03 22:36:51.073312) | Neuron initiated with id 12 in layer 1
+(2020-02-03 22:36:51.073312) | Neuron initiated with id 13 in layer 1
+(2020-02-03 22:36:51.073312) | Neuron initiated with id 14 in layer 1
+(2020-02-03 22:36:51.073312) | Neuron initiated with id 15 in layer 1
+(2020-02-03 22:36:51.073312) | Neuron initiated with id 16 in layer 1
+(2020-02-03 22:36:51.074311) | Neuron initiated with id 17 in layer 1
+(2020-02-03 22:36:51.074311) | Neuron initiated with id 18 in layer 1
+(2020-02-03 22:36:51.074311) | Neuron initiated with id 19 in layer 1
+(2020-02-03 22:36:51.074311) | Neuron initiated with id 20 in layer 1
+(2020-02-03 22:36:51.074311) | Neuron initiated with id 21 in layer 1
+(2020-02-03 22:36:51.074311) | Neuron initiated with id 22 in layer 1
+(2020-02-03 22:36:51.075309) | Neuron initiated with id 23 in layer 1
+(2020-02-03 22:36:51.075309) | Neuron initiated with id 24 in layer 1
+(2020-02-03 22:36:51.075309) | Neuron initiated with id 25 in layer 1
+(2020-02-03 22:36:51.075309) | Neuron initiated with id 26 in layer 1
+(2020-02-03 22:36:51.075309) | Neuron initiated with id 27 in layer 1
+(2020-02-03 22:36:51.075309) | Neuron initiated with id 28 in layer 1
+(2020-02-03 22:36:51.075309) | Neuron initiated with id 29 in layer 1
+(2020-02-03 22:36:51.076306) | Neuron initiated with id 30 in layer 1
+(2020-02-03 22:36:51.076306) | Neuron initiated with id 31 in layer 1
+(2020-02-03 22:36:51.076306) | Neuron initiated with id 0 in layer 2
+(2020-02-03 22:36:51.076306) | Neuron initiated with id 1 in layer 2
+(2020-02-03 22:36:51.076306) | Neuron initiated with id 2 in layer 2
+(2020-02-03 22:36:51.076306) | Neuron initiated with id 3 in layer 2
+(2020-02-03 22:36:51.077301) | Neuron initiated with id 4 in layer 2
+(2020-02-03 22:36:51.077301) | Neuron initiated with id 5 in layer 2
+(2020-02-03 22:36:51.077301) | Neuron initiated with id 6 in layer 2
+(2020-02-03 22:36:51.077301) | Neuron initiated with id 7 in layer 2
+(2020-02-03 22:36:51.077301) | Neuron initiated with id 8 in layer 2
+(2020-02-03 22:36:51.077301) | Neuron initiated with id 9 in layer 2
+(2020-02-03 22:36:51.077301) | Neuron initiated with id 10 in layer 2
+(2020-02-03 22:36:51.078298) | Neuron initiated with id 11 in layer 2
+(2020-02-03 22:36:51.078298) | Neuron initiated with id 12 in layer 2
+(2020-02-03 22:36:51.078298) | Neuron initiated with id 13 in layer 2
+(2020-02-03 22:36:51.078298) | Neuron initiated with id 14 in layer 2
+(2020-02-03 22:36:51.078298) | Neuron initiated with id 15 in layer 2
+(2020-02-03 22:36:51.078298) | Neuron initiated with id 16 in layer 2
+(2020-02-03 22:36:51.078298) | Neuron initiated with id 17 in layer 2
+(2020-02-03 22:36:51.078298) | Neuron initiated with id 18 in layer 2
+(2020-02-03 22:36:51.079295) | Neuron initiated with id 19 in layer 2
+(2020-02-03 22:36:51.079295) | Neuron initiated with id 20 in layer 2
+(2020-02-03 22:36:51.079295) | Neuron initiated with id 21 in layer 2
+(2020-02-03 22:36:51.079295) | Neuron initiated with id 22 in layer 2
+(2020-02-03 22:36:51.079295) | Neuron initiated with id 23 in layer 2
+(2020-02-03 22:36:51.079295) | Neuron initiated with id 24 in layer 2
+(2020-02-03 22:36:51.079295) | Neuron initiated with id 25 in layer 2
+(2020-02-03 22:36:51.079295) | Neuron initiated with id 26 in layer 2
+(2020-02-03 22:36:51.080292) | Neuron initiated with id 27 in layer 2
+(2020-02-03 22:36:51.080307) | Neuron initiated with id 28 in layer 2
+(2020-02-03 22:36:51.080307) | Neuron initiated with id 29 in layer 2
+(2020-02-03 22:36:51.080307) | Neuron initiated with id 30 in layer 2
+(2020-02-03 22:36:51.080307) | Neuron initiated with id 31 in layer 2
+(2020-02-03 22:36:51.080307) | Neuron initiated with id 0 in layer 3
+(2020-02-03 22:36:51.080307) | Neuron initiated with id 1 in layer 3
+(2020-02-03 22:36:51.080307) | Neuron initiated with id 2 in layer 3
+(2020-02-03 22:36:51.080307) | Neuron initiated with id 0 in layer 4
+(2020-02-03 22:36:51.081306) | Assigned random weights
+(2020-02-03 22:36:52.422398) | Starting fitness of network is: -1776.645893
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 32, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 60, in train
+    dir_list = [fitness-eval(model) for model in model_list]
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 60, in <listcomp>
+    dir_list = [fitness-eval(model) for model in model_list]
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 45, in eval
+    fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 87, in run_over_data
+    afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 45, in predict
+    biases = self.layers[l].bias_matrix()
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 24, in bias_matrix
+    biaslist = np.array([[neuron.bias for neuron in self.neurons]])
+KeyboardInterrupt

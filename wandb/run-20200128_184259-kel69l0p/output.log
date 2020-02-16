@@ -1,0 +1,25 @@
+(2020-01-28 19:43:02.355034) | Strategy init with wallet: BNBUSDT
+(2020-01-28 19:43:02.356555) | Interval that is fed to network has length: 8
+(2020-01-28 19:43:02.357564) | Neuron initiated with id 0 in layer 0
+(2020-01-28 19:43:02.357564) | Neuron initiated with id 1 in layer 0
+(2020-01-28 19:43:02.358582) | Neuron initiated with id 2 in layer 0
+(2020-01-28 19:43:02.358582) | Neuron initiated with id 3 in layer 0
+(2020-01-28 19:43:02.358582) | Neuron initiated with id 4 in layer 0
+(2020-01-28 19:43:02.359617) | Neuron initiated with id 5 in layer 0
+(2020-01-28 19:43:02.359854) | Neuron initiated with id 6 in layer 0
+(2020-01-28 19:43:02.359854) | Neuron initiated with id 7 in layer 0
+(2020-01-28 19:43:02.359854) | Neuron initiated with id 0 in layer 1
+(2020-01-28 19:43:02.360858) | Neuron initiated with id 1 in layer 1
+(2020-01-28 19:43:02.360858) | Neuron initiated with id 2 in layer 1
+(2020-01-28 19:43:02.361876) | Neuron initiated with id 0 in layer 2
+(2020-01-28 19:43:02.361876) | Assigned random weights
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    start = main()
+  File "main.py", line 23, in __init__
+    strategy = Strategy.Strategy(wallet,binance_client=client)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 24, in __init__
+    self.model.load()
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 59, in load
+    file = open(filename,'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'network.model'

@@ -1,0 +1,28 @@
+(2020-02-06 19:01:55.698548) | Strategy init with wallet: BNBUSDT
+(2020-02-06 19:01:55.703553) | Interval that is fed to network has length: 5
+(2020-02-06 19:01:55.706430) | Loading network.model
+(2020-02-06 19:01:55.712452) | Neuron initiated with id 0 in layer 0
+(2020-02-06 19:01:55.713413) | Neuron initiated with id 1 in layer 0
+(2020-02-06 19:01:55.714020) | Neuron initiated with id 0 in layer 1
+(2020-02-06 19:01:55.715020) | [2, 1]
+(2020-02-06 19:01:55.717005) | Loading in model line: ['1', '0', '[0.22996534201929386,0.4553269595144373]', '0']
+(2020-02-06 19:01:55.723986) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-02-06 19:01:55.723986) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-02-06 19:01:55.724982) | Neuron 0 in layer: 1 has weights and bias[0.22996534201929386, 0.455326959514437] bias: 0.0
+MODEL PRINT RESULT
+(2020-02-06 19:01:55.725979) | Assigned random weights
+(2020-02-06 19:01:56.987814) | Input size is different from input layer size
+Traceback (most recent call last):
+  File "main.py", line 53, in <module>
+    start = main()
+  File "main.py", line 34, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 33, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 48, in train
+    fitness = eval(self.model)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 46, in eval
+    fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 89, in run_over_data
+    afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+TypeError: bad operand type for abs(): 'NoneType'

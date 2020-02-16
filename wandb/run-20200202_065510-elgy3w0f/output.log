@@ -1,0 +1,19 @@
+(2020-02-02 07:55:13.897896) | Strategy init with wallet: BNBUSDT
+(2020-02-02 07:55:13.912975) | Interval that is fed to network has length: 2
+(2020-02-02 07:55:13.916009) | Neuron initiated with id 0 in layer 0
+(2020-02-02 07:55:13.919904) | Neuron initiated with id 1 in layer 0
+(2020-02-02 07:55:13.926909) | Neuron initiated with id 0 in layer 1
+(2020-02-02 07:55:13.928569) | Assigned random weights
+(2020-02-02 07:55:15.271847) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-02-02 07:55:15.277640) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-02-02 07:55:15.286101) | Neuron 0 in layer: 1 has weights and bias[0.14686070944992569, 0.5825205307582045] bias: 0
+Traceback (most recent call last):
+  File "main.py", line 36, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 30, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 46, in train
+    str(self.model)
+TypeError: __str__ returned non-string (type NoneType)

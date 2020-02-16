@@ -1,0 +1,18 @@
+(2020-02-03 21:13:44.975809) | Strategy init with wallet: BNBUSDT
+(2020-02-03 21:13:44.979702) | Interval that is fed to network has length: 2
+(2020-02-03 21:13:44.981697) | Neuron initiated with id 0 in layer 0
+(2020-02-03 21:13:44.993654) | Neuron initiated with id 1 in layer 0
+(2020-02-03 21:13:44.997063) | Neuron initiated with id 0 in layer 1
+(2020-02-03 21:13:44.998060) | Assigned random weights
+(2020-02-03 21:13:45.005739) | Loading in model line: ['1', '0', '[-0.13850930157138155,0.5268152300000]', '-0.0006400000000000004']
+(2020-02-03 21:13:46.627289) | -2.9724925406665723
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 32, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 48, in train
+    Logger.Log('Starting fitness of network is: '+fitness)
+TypeError: can only concatenate str (not "numpy.float64") to str

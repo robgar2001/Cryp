@@ -1,0 +1,21 @@
+(2020-02-06 00:28:44.614705) | Strategy init with wallet: BNBUSDT
+(2020-02-06 00:28:44.614705) | Interval that is fed to network has length: 32
+(2020-02-06 00:28:44.614705) | Neuron initiated with id 0 in layer 0
+(2020-02-06 00:28:44.614705) | Neuron initiated with id 1 in layer 0
+(2020-02-06 00:28:44.614705) | Neuron initiated with id 2 in layer 0
+(2020-02-06 00:28:44.614705) | Neuron initiated with id 0 in layer 1
+(2020-02-06 00:28:44.614705) | Assigned random weights
+(2020-02-06 00:28:45.708188) | Starting fitness of network is: -6.410276
+-0.03264442998241002 -6.377631936996203
+Traceback (most recent call last):
+  File "main.py", line 46, in <module>
+    start = main()
+  File "main.py", line 38, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet,network_structure=netwerk)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 36, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 81, in train
+    self.model.save(filename=sys.argv[2:])
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 76, in save
+    file = open(filename,'w')
+TypeError: expected str, bytes or os.PathLike object, not list

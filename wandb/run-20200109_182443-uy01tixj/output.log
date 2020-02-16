@@ -1,0 +1,18 @@
+(2020-01-09 19:24:46.529398) | Strategy init with wallet: BNBUSDT
+(2020-01-09 19:24:46.530530) | Interval that is fed to network has length: 8
+(2020-01-09 19:24:46.530530) | Neuron initiated with id 0 in layer 0
+(2020-01-09 19:24:46.530530) | Neuron initiated with id 1 in layer 0
+(2020-01-09 19:24:46.531700) | Neuron initiated with id 2 in layer 0
+(2020-01-09 19:24:46.531700) | Neuron initiated with id 3 in layer 0
+(2020-01-09 19:24:46.531700) | Neuron initiated with id 4 in layer 0
+(2020-01-09 19:24:46.532729) | Neuron initiated with id 5 in layer 0
+(2020-01-09 19:24:46.533340) | Neuron initiated with id 6 in layer 0
+(2020-01-09 19:24:46.533340) | Neuron initiated with id 7 in layer 0
+(2020-01-09 19:24:46.533340) | Neuron initiated with id 0 in layer 1
+(2020-01-09 19:24:46.534342) | Neuron initiated with id 1 in layer 1
+(2020-01-09 19:24:46.534342) | Neuron initiated with id 2 in layer 1
+(2020-01-09 19:24:46.534342) | Neuron initiated with id 3 in layer 1
+(2020-01-09 19:24:46.535353) | Neuron initiated with id 4 in layer 1
+(2020-01-09 19:24:46.535353) | Neuron initiated with id 5 in layer 1
+(2020-01-09 19:24:46.536339) | Neuron initiated with id 0 in layer 2
+(2020-01-09 19:24:46.536339) | Assigned random weights

@@ -1,0 +1,46 @@
+(2020-01-09 12:14:04.534933) | Strategy init with wallet: BNBUSDT
+(2020-01-09 12:14:04.535932) | Interval that is fed to network has length: 8
+(2020-01-09 12:14:04.539871) | Neuron initiated with id 0 in layer 0
+(2020-01-09 12:14:04.542240) | Neuron initiated with id 1 in layer 0
+(2020-01-09 12:14:04.545550) | Neuron initiated with id 2 in layer 0
+(2020-01-09 12:14:04.547576) | Neuron initiated with id 3 in layer 0
+(2020-01-09 12:14:04.549467) | Neuron initiated with id 4 in layer 0
+(2020-01-09 12:14:04.554258) | Neuron initiated with id 5 in layer 0
+(2020-01-09 12:14:04.555949) | Neuron initiated with id 6 in layer 0
+(2020-01-09 12:14:04.557520) | Neuron initiated with id 7 in layer 0
+(2020-01-09 12:14:04.559259) | Neuron initiated with id 0 in layer 1
+(2020-01-09 12:14:04.561443) | Neuron initiated with id 1 in layer 1
+(2020-01-09 12:14:04.563292) | Neuron initiated with id 2 in layer 1
+(2020-01-09 12:14:04.565022) | Neuron initiated with id 0 in layer 2
+(2020-01-09 12:14:04.571279) | Assigned random weights
+(2020-01-09 12:14:04.573451) | Loading in model line: ['1', '0', '[-0.9107323343842635,-0.9996211621826105,-0.9999634224063267,-0.9996680276828642,-0.999998980426664,-0.9999340424049781,-0.9999780452782034,-0.995058999999989]', '-0.004110000000000002']
+(2020-01-09 12:14:04.575077) | Loading in model line: ['1', '1', '[-0.3448827104988191,-0.17533131673484664,-0.07604984913879242,-0.18269530170908851,-0.22033319075213517,-0.12281108728073181,-0.14233901387413392,-0.0765737934306769]', '-0.0074100000000000095']
+(2020-01-09 12:14:04.576625) | Loading in model line: ['1', '2', '[-0.07555652315785782,0.2442975491553602,0.37534214449094255,0.18589728011522758,0.08518100473662141,0.5202841491608515,0.028304934544860116,0.534890000000000]', '-0.004410000000000002']
+(2020-01-09 12:14:04.578609) | Loading in model line: ['2', '0', '[0.16439280623803756,-0.7452893911284258,0.1527051346999989]', '-0.004210000000000001']
+(2020-01-09 12:14:05.736391) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:14:05.737416) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:14:05.741058) | Neuron 2 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:14:05.745657) | Neuron 3 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:14:05.747457) | Neuron 4 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:14:05.749261) | Neuron 5 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:14:05.753596) | Neuron 6 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:14:05.755648) | Neuron 7 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:14:05.757561) | Neuron 0 in layer: 1 has weights and bias[-0.9107323343842635, -0.9996211621826105, -0.9999634224063267, -0.9996680276828642, -0.999998980426664, -0.9999340424049781, -0.9999780452782034, -0.99505899999998] bias: -0.004110000000000002
+(2020-01-09 12:14:05.759491) | Neuron 1 in layer: 1 has weights and bias[-0.3448827104988191, -0.17533131673484664, -0.07604984913879242, -0.18269530170908851, -0.22033319075213517, -0.12281108728073181, -0.14233901387413392, -0.076573793430676] bias: -0.0074100000000000095
+(2020-01-09 12:14:05.760487) | Neuron 2 in layer: 1 has weights and bias[-0.07555652315785782, 0.2442975491553602, 0.37534214449094255, 0.18589728011522758, 0.08518100473662141, 0.5202841491608515, 0.028304934544860116, 0.53489] bias: -0.004410000000000002
+(2020-01-09 12:14:05.763960) | Neuron 0 in layer: 2 has weights and bias[0.16439280623803756, -0.7452893911284258, 0.152705134699998] bias: -0.004210000000000001
+(2020-01-09 12:14:05.879405) | -15.447594653058195
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    start = main()
+  File "main.py", line 23, in __init__
+    strategy = Strategy.Strategy(wallet,binance_client=client)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 31, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 54, in train
+    self.model.save()
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 74, in save
+    wandb.save("weights.npy")
+  File "C:\Users\robbe\AppData\Local\Programs\Python\Python37-32\lib\site-packages\wandb\__init__.py", line 587, in save
+    os.symlink(abs_path, wandb_path)
+OSError: symbolic link privilege not held

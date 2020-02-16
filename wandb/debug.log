@@ -1,0 +1,50 @@
+2020-02-06 19:16:58,818 DEBUG   MainThread:7204 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
+2020-02-06 19:16:58,854 DEBUG   MainThread:7204 [run_manager.py:__init__():535] Initialized sync for cryp/9cbt7ptb
+2020-02-06 19:16:58,865 INFO    MainThread:7204 [run_manager.py:wrap_existing_process():1133] wrapping existing process 16856
+2020-02-06 19:16:58,867 DEBUG   MainThread:7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
+2020-02-06 19:16:59,000 DEBUG   MainThread:7204 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 40617
+2020-02-06 19:16:59,065 INFO    MainThread:7204 [run_manager.py:init_run():918] system metrics and metadata threads started
+2020-02-06 19:16:59,072 INFO    MainThread:7204 [run_manager.py:init_run():952] upserting run before process can begin, waiting at most 10 seconds
+2020-02-06 19:16:59,082 DEBUG   Thread-14 :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-06 19:16:59,379 DEBUG   Thread-14 :7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 519
+2020-02-06 19:16:59,396 INFO    Thread-14 :7204 [run_manager.py:_upsert_run():1037] saving patches
+2020-02-06 19:16:59,397 INFO    Thread-14 :7204 [run_manager.py:_upsert_run():1041] saving pip packages
+2020-02-06 19:16:59,399 INFO    Thread-14 :7204 [run_manager.py:_upsert_run():1043] initializing streaming files api
+2020-02-06 19:16:59,400 INFO    Thread-14 :7204 [run_manager.py:_upsert_run():1050] unblocking file change observer, beginning sync with W&B servers
+2020-02-06 19:16:59,401 INFO    MainThread:7204 [run_manager.py:wrap_existing_process():1150] informing user process we are ready to proceed
+2020-02-06 19:16:59,405 INFO    MainThread:7204 [run_manager.py:_sync_etc():1257] entering loop for messages from user process
+2020-02-06 19:16:59,406 DEBUG   Thread-15 :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-06 19:16:59,649 DEBUG   Thread-15 :7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2020-02-06 19:16:59,834 INFO    Thread-3  :7204 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200206_181656-9cbt7ptb\requirements.txt
+2020-02-06 19:16:59,835 INFO    Thread-3  :7204 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200206_181656-9cbt7ptb\wandb-metadata.json
+2020-02-06 19:16:59,836 INFO    Thread-3  :7204 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200206_181656-9cbt7ptb\output.log
+2020-02-06 19:17:01,873 DEBUG   Thread-16 :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-06 19:17:01,960 DEBUG   Thread-17 :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-06 19:17:02,163 DEBUG   Thread-16 :7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 759
+2020-02-06 19:17:02,178 DEBUG   Thread-16 :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-02-06 19:17:02,198 DEBUG   Thread-17 :7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 757
+2020-02-06 19:17:02,212 DEBUG   Thread-17 :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-02-06 19:17:02,683 DEBUG   Thread-17 :7204 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/9cbt7ptb/wandb-metadata.json?Expires=1581013086&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=bKInOxgL4cOExXv8M1CyiOcDbVOBSk0MY1S7yHPtG5S7lwuc623hoK6rBjaqVuwydc51DynrLX2PFg7xhiredbmhVI2qlltMkdI7pS5%2BJhpfkPwVQOxJXmTiCoRgzTv0Xgya4tOhDL1PqYVQ6b7%2F0RIzpf8Rncpkmw7x72Ng32NJOEPnPEvtYSBKIXyvK6mAXRc8Eka%2FUxt1ntPfRF6s17PJQMtWwMkjXEoEfaxgYVLIFk98zGOIQnXXYaw8Xz5RUaDZ6ntc%2FywnB%2BZ0aldRmL%2BrYib9v%2B5GqK%2Ft2yx00No4gqxyEHNewkTwm7X5itcgtJVCrY0ISbp3oPy2W70usg%3D%3D HTTP/1.1" 200 0
+2020-02-06 19:17:02,780 DEBUG   Thread-16 :7204 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/9cbt7ptb/requirements.txt?Expires=1581013086&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=owP1vY9Va90j%2Be%2B9tAHxDoNPfHqzE4NPic5704jXe6C58IhVRe1B4mgLwG%2BxYuU2BsVHJP5m6%2FNX6ZiZvMJgYl7cfBFOqTZRmqVFXpTBGUDjZ30hpBFPIfHTYlSk%2Bhkbe%2BI9SXcXz%2FEHTgkSQ6hKyktIG9fj%2FSKcWzdANUzko7RZuRlKljAXUU%2FL%2F3nIV0LzpyjRALBhrEFMEecFoQM5epmTz3xePH2li4q%2F8A%2Bv7BoonrXJq0469nZREaQCRH26D2blpjIQyuyZB0uSiTRqv3WhT6HCr2ytxjlxZf3H4GjDdffWoPEQrI0kbQQFBaA79IM9I419oANR6RRlhsbLyA%3D%3D HTTP/1.1" 200 0
+2020-02-06 19:17:03,556 INFO    MainThread:7204 [run_manager.py:_sync_etc():1280] received message from user process: {"exitcode": 0}
+2020-02-06 19:17:03,560 INFO    MainThread:7204 [run_manager.py:_sync_etc():1366] closing log streams and sending exitcode to W&B
+2020-02-06 19:17:03,564 INFO    MainThread:7204 [run_manager.py:shutdown():1057] shutting down system stats and metadata service
+2020-02-06 19:17:03,567 DEBUG   Thread-7  :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-06 19:17:03,837 DEBUG   Thread-7  :7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/robgar2001/cryp/9cbt7ptb/file_stream HTTP/1.1" 200 311
+2020-02-06 19:17:03,839 INFO    Thread-3  :7204 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200206_181656-9cbt7ptb\output.log
+2020-02-06 19:17:03,840 INFO    Thread-3  :7204 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200206_181656-9cbt7ptb\wandb-events.jsonl
+2020-02-06 19:17:04,070 INFO    MainThread:7204 [run_manager.py:shutdown():1069] stopping streaming files and file change observer
+2020-02-06 19:17:04,840 INFO    Thread-3  :7204 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200206_181656-9cbt7ptb\wandb-metadata.json
+2020-02-06 19:17:04,869 DEBUG   MainThread:7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-06 19:17:05,134 DEBUG   MainThread:7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 541
+2020-02-06 19:17:05,871 DEBUG   MainThread:7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-06 19:17:06,008 DEBUG   Thread-7  :7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/robgar2001/cryp/9cbt7ptb/file_stream HTTP/1.1" 200 311
+2020-02-06 19:17:06,129 DEBUG   MainThread:7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 541
+2020-02-06 19:17:06,184 DEBUG   Thread-20 :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-06 19:17:06,295 DEBUG   Thread-7  :7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/robgar2001/cryp/9cbt7ptb/file_stream HTTP/1.1" 200 308
+2020-02-06 19:17:06,297 INFO    MainThread:7204 [run_manager.py:_sync_etc():1418] syncing files to cloud storage
+2020-02-06 19:17:06,430 DEBUG   Thread-20 :7204 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 777
+2020-02-06 19:17:06,448 DEBUG   Thread-20 :7204 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-02-06 19:17:07,007 DEBUG   Thread-20 :7204 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/9cbt7ptb/___batch_archive_1.tgz?Expires=1581013090&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=TCpbUs2A9DuCt%2FvPbFvlboCWXt%2FIhgR9gEXgCQK%2BpIQI4UHEnfpXYJZP%2BCZXzwee45KCkbNczxoTgMMs6MRfTlN70UWHdqOnksIuY5H%2BMDDetECoz%2F7XUuZDpPfWq7w%2FmMc%2FDga%2BcsIHgMLxyuENBV8mhXDp1R9%2BDFJsPc60xrpKvVcYO1DI3bM2UDjr4emb5%2BJXYcHHhPixb%2F3kViLeNhg4v8mbyqYvjQPlAqsa5IQL6TYj38gpcB7zxTYnbKGfEis9NsO0inmNxOp2Omia6dcHVvuJC04rJ3tc%2FNO6Nbpz%2Bx9seqosForJDR8xI6Ycm61tfC%2FaIysiI3eyMFfYuA%3D%3D HTTP/1.1" 200 0
+2020-02-06 19:17:08,058 INFO    MainThread:7204 [run_manager.py:_sync_etc():1433] syncing complete: https://app.wandb.ai/robgar2001/cryp/runs/9cbt7ptb
+2020-02-06 19:17:08,058 INFO    MainThread:7204 [9cbt7ptb:run_manager.py:_sync_etc():1433] syncing complete: https://app.wandb.ai/robgar2001/cryp/runs/9cbt7ptb

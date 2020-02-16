@@ -1,0 +1,25 @@
+(2020-02-03 21:19:49.086150) | Strategy init with wallet: BNBUSDT
+(2020-02-03 21:19:49.086150) | Interval that is fed to network has length: 2
+(2020-02-03 21:19:49.094581) | Neuron initiated with id 0 in layer 0
+(2020-02-03 21:19:49.097694) | Neuron initiated with id 1 in layer 0
+(2020-02-03 21:19:49.104960) | Neuron initiated with id 0 in layer 1
+(2020-02-03 21:19:49.105960) | Assigned random weights
+(2020-02-03 21:19:49.110826) | Loading in model line: ['1', '0', '[2.3514906984286124,1.2668152]', '-0.0006400000000000004']
+(2020-02-03 21:19:50.101279) | -8.766798948655133
+(2020-02-03 21:19:50.102470) | Starting fitness of network is: -8.766799
+(2020-02-03 21:19:50.133108) | -8.766798948655133
+(2020-02-03 21:19:50.163347) | -8.766798948655133
+[0.0, 0.0]
+(2020-02-03 21:19:50.196858) | -8.766798948655133
+(2020-02-03 21:19:50.229785) | -8.766798948655133
+[0.0, 0.0]
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 32, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 71, in train
+    self.model.layers[maxdir_tup[0]].neurons[maxdir_tup[1]].weights[maxdir_tup[2]] +=accuracy
+TypeError: 'NoneType' object is not subscriptable

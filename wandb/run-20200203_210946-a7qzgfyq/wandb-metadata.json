@@ -1,0 +1,20 @@
+{
+    "root": "C:\\Users\\robbe\\PycharmProjects\\Cryp",
+    "program": "main.py",
+    "startedAt": "2020-02-03T21:09:46.674942",
+    "host": "LAPTOP-C8NSGFF4",
+    "username": "robbe",
+    "executable": "C:\\Users\\robbe\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "os": "Windows-10-10.0.18362-SP0",
+    "python": "3.7.4",
+    "cpu_count": 8,
+    "args": [
+        "train"
+    ],
+    "state": "killed",
+    "jobType": null,
+    "mode": "run",
+    "project": "cryp",
+    "heartbeatAt": "2020-02-03T21:09:57.768985",
+    "exitcode": 255
+}

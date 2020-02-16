@@ -1,0 +1,130 @@
+(2020-02-06 18:14:13.537624) | Strategy init with wallet: BNBUSDT
+(2020-02-06 18:14:13.538672) | Interval that is fed to network has length: 5
+(2020-02-06 18:14:13.542044) | Neuron initiated with id 0 in layer 0
+(2020-02-06 18:14:13.548316) | Neuron initiated with id 0 in layer 1
+(2020-02-06 18:14:13.550308) | Assigned random weights
+(2020-02-06 18:14:14.683830) | Starting fitness of network is: -1.881585
+-0.0036911197355453673 -1.87789410317032
+(2020-02-06 18:14:14.726281) | saved network succesfully
+-0.0036911197355453673 -1.87431406640277
+(2020-02-06 18:14:14.760313) | saved network succesfully
+-0.0036911197355453673 -1.870737438700254
+(2020-02-06 18:14:14.795783) | saved network succesfully
+-0.0036911197355453673 -1.8674291102760057
+(2020-02-06 18:14:14.834131) | saved network succesfully
+-0.0036911197355453673 -1.8647463372519093
+(2020-02-06 18:14:14.870458) | saved network succesfully
+-0.0036911197355453673 -1.8625779942576914
+(2020-02-06 18:14:14.902737) | saved network succesfully
+-0.0036911197355453673 -1.8607769126465863
+(2020-02-06 18:14:14.927778) | saved network succesfully
+-0.0036911197355453673 -1.859028607555696
+(2020-02-06 18:14:14.957064) | saved network succesfully
+-0.0036911197355453673 -1.8572811187712819
+(2020-02-06 18:14:14.997533) | saved network succesfully
+-0.0036911197355453673 -1.8556081200008254
+(2020-02-06 18:14:15.035133) | saved network succesfully
+-0.0036911197355453673 -1.8539588019883109
+(2020-02-06 18:14:15.070305) | saved network succesfully
+-0.0036911197355453673 -1.8525776337605206
+(2020-02-06 18:14:15.103583) | saved network succesfully
+-0.0036911197355453673 -1.8513372476266625
+(2020-02-06 18:14:15.133203) | saved network succesfully
+-0.0036911197355453673 -1.850265197779144
+(2020-02-06 18:14:15.187727) | saved network succesfully
+-0.0036911197355453673 -1.8492261642850214
+(2020-02-06 18:14:15.222682) | saved network succesfully
+-0.0036911197355453673 -1.8482809299033893
+(2020-02-06 18:14:15.253141) | saved network succesfully
+-0.0036911197355453673 -1.8475274607632606
+(2020-02-06 18:14:15.288991) | saved network succesfully
+-0.0036911197355453673 -1.8471413446590013
+(2020-02-06 18:14:15.321156) | saved network succesfully
+-0.0036911197355453673 -1.846780465866376
+(2020-02-06 18:14:15.358310) | saved network succesfully
+-0.0036911197355453673 -1.8464979702852211
+(2020-02-06 18:14:15.396587) | saved network succesfully
+-0.0036911197355453673 -1.8463808364118186
+(2020-02-06 18:14:15.440426) | saved network succesfully
+-0.0036911197355453673 -1.8466175777983822
+(2020-02-06 18:14:15.469704) | saved network succesfully
+(2020-02-06 18:14:18.489590) | Init DigitalWallet [BNB:0.000000][USDT:50.000000] BNB/USDT
+(2020-02-06 18:14:18.490587) | Strategy init with wallet: BNBUSDT
+(2020-02-06 18:14:18.501626) | Interval that is fed to network has length: 5
+(2020-02-06 18:14:18.502625) | Neuron initiated with id 0 in layer 0
+(2020-02-06 18:14:18.502625) | Neuron initiated with id 1 in layer 0
+(2020-02-06 18:14:18.504618) | Neuron initiated with id 0 in layer 1
+(2020-02-06 18:14:18.509030) | Assigned random weights
+(2020-02-06 18:14:19.196388) | Starting fitness of network is: -1.894606
+-0.004477714248304787 -1.890128133377588
+(2020-02-06 18:14:19.254148) | saved network succesfully
+-0.004477714248304787 -1.8864306472623487
+(2020-02-06 18:14:19.313639) | saved network succesfully
+-0.004477714248304787 -1.8830296961638906
+(2020-02-06 18:14:19.376111) | saved network succesfully
+-0.004477714248304787 -1.8799174392903055
+(2020-02-06 18:14:19.435065) | saved network succesfully
+-0.004477714248304787 -1.8768930157554498
+(2020-02-06 18:14:19.484511) | saved network succesfully
+-0.004477714248304787 -1.873944323250124
+(2020-02-06 18:14:19.530076) | saved network succesfully
+-0.004477714248304787 -1.870997947466426
+(2020-02-06 18:14:19.575106) | saved network succesfully
+-0.004477714248304787 -1.8683865965876958
+(2020-02-06 18:14:19.615174) | saved network succesfully
+-0.004477714248304787 -1.865787304129942
+(2020-02-06 18:14:19.647115) | saved network succesfully
+-0.004477714248304787 -1.8634503211731859
+(2020-02-06 18:14:19.717252) | saved network succesfully
+-0.004477714248304787 -1.8616787272640751
+(2020-02-06 18:14:19.799816) | saved network succesfully
+-0.004477714248304787 -1.8602146973711968
+(2020-02-06 18:14:19.853954) | saved network succesfully
+-0.004477714248304787 -1.8588392667442402
+(2020-02-06 18:14:19.915398) | saved network succesfully
+-0.004477714248304787 -1.8577011196726159
+(2020-02-06 18:14:19.957845) | saved network succesfully
+-0.004477714248304787 -1.856644048093838
+(2020-02-06 18:14:20.008093) | saved network succesfully
+-0.004477714248304787 -1.8556372497143936
+(2020-02-06 18:14:20.068000) | saved network succesfully
+-0.004477714248304787 -1.8546379636178403
+(2020-02-06 18:14:20.123135) | saved network succesfully
+-0.004477714248304787 -1.853680821279805
+(2020-02-06 18:14:20.179905) | saved network succesfully
+-0.004477714248304787 -1.8527239233192305
+(2020-02-06 18:14:20.221942) | saved network succesfully
+-0.004477714248304787 -1.8517672696812624
+(2020-02-06 18:14:20.288533) | saved network succesfully
+-0.004477714248304787 -1.8509497992546082
+(2020-02-06 18:14:20.344975) | saved network succesfully
+-0.004477714248304787 -1.8502020250950442
+(2020-02-06 18:14:20.412751) | saved network succesfully
+-0.004477714248304787 -1.849454399112668
+(2020-02-06 18:14:20.473118) | saved network succesfully
+-0.004477714248304787 -1.8487069212522091
+(2020-02-06 18:14:20.527314) | saved network succesfully
+-0.004477714248304787 -1.8479595914584444
+(2020-02-06 18:14:20.598756) | saved network succesfully
+-0.004477714248304787 -1.8472124096761957
+(2020-02-06 18:14:20.648473) | saved network succesfully
+-0.004477714248304787 -1.8466699837058929
+(2020-02-06 18:14:20.697925) | saved network succesfully
+Traceback (most recent call last):
+  File "main.py", line 57, in <module>
+    start = main()
+  File "main.py", line 53, in __init__
+    strategy = Strategy.Strategy(binance_client=client, wallet=wallet, network_structure=y)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 36, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 64, in train
+    dir_list = [fitness-eval(model) for model in model_list]
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 64, in <listcomp>
+    dir_list = [fitness-eval(model) for model in model_list]
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 49, in eval
+    fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 91, in run_over_data
+    afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 35, in predict
+    inputs = [float(i) for i in inputs]
+KeyboardInterrupt

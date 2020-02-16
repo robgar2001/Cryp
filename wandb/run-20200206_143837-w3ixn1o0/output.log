@@ -1,0 +1,19 @@
+(2020-02-06 15:38:40.299181) | Strategy init with wallet: BNBUSDT
+(2020-02-06 15:38:40.299181) | Interval that is fed to network has length: 5
+(2020-02-06 15:38:40.300225) | Neuron initiated with id 0 in layer 0
+(2020-02-06 15:38:40.301297) | Neuron initiated with id 1 in layer 0
+(2020-02-06 15:38:40.302295) | Neuron initiated with id 0 in layer 1
+(2020-02-06 15:38:40.303634) | Assigned random weights
+(2020-02-06 15:38:40.307148) | Loading in model line: ['1', '0', '[0.15199579908104655,0.07316665458788041,0.09015992023752423,0.34280970157356583,0.456895452333432]', '0']
+Traceback (most recent call last):
+  File "main.py", line 51, in <module>
+    start = main()
+  File "main.py", line 38, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet,network_structure=netwerk)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 39, in __init__
+    'predicted_price':self.prediction_results(data=network_da,interval_size=self.model_interval)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 102, in prediction_results
+    voorspellingen.append(self.model.predict(inputs=data[i:i + interval_size]).tolist()[0][0])
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 46, in predict
+    outputs = self.activation_function((weights@values)+biases)
+ValueError: shapes (1,5) and (2,1) not aligned: 5 (dim 1) != 2 (dim 0)

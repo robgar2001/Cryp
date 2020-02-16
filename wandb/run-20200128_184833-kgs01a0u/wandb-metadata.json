@@ -1,0 +1,18 @@
+{
+    "root": "C:\\Users\\robbe\\PycharmProjects\\Cryp",
+    "program": "C:/Users/robbe/PycharmProjects/Cryp/main.py",
+    "startedAt": "2020-01-28T18:48:33.950719",
+    "host": "LAPTOP-C8NSGFF4",
+    "username": "robbe",
+    "executable": "C:\\Users\\robbe\\PycharmProjects\\Cryp\\venv\\Scripts\\python.exe",
+    "os": "Windows-10-10.0.18362-SP0",
+    "python": "3.7.4",
+    "cpu_count": 8,
+    "args": [],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "project": "cryp",
+    "heartbeatAt": "2020-01-28T18:49:27.078203",
+    "exitcode": 0
+}

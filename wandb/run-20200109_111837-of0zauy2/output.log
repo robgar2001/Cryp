@@ -1,0 +1,53 @@
+(2020-01-09 12:18:41.043362) | Strategy init with wallet: BNBUSDT
+(2020-01-09 12:18:41.043362) | Interval that is fed to network has length: 8
+(2020-01-09 12:18:41.048347) | Neuron initiated with id 0 in layer 0
+(2020-01-09 12:18:41.053901) | Neuron initiated with id 1 in layer 0
+(2020-01-09 12:18:41.058041) | Neuron initiated with id 2 in layer 0
+(2020-01-09 12:18:41.064277) | Neuron initiated with id 3 in layer 0
+(2020-01-09 12:18:41.070522) | Neuron initiated with id 4 in layer 0
+(2020-01-09 12:18:41.076226) | Neuron initiated with id 5 in layer 0
+(2020-01-09 12:18:41.079845) | Neuron initiated with id 6 in layer 0
+(2020-01-09 12:18:41.083830) | Neuron initiated with id 7 in layer 0
+(2020-01-09 12:18:41.085920) | Neuron initiated with id 0 in layer 1
+(2020-01-09 12:18:41.093306) | Neuron initiated with id 1 in layer 1
+(2020-01-09 12:18:41.094395) | Neuron initiated with id 2 in layer 1
+(2020-01-09 12:18:41.098518) | Neuron initiated with id 3 in layer 1
+(2020-01-09 12:18:41.100975) | Neuron initiated with id 4 in layer 1
+(2020-01-09 12:18:41.104975) | Neuron initiated with id 5 in layer 1
+(2020-01-09 12:18:41.111681) | Neuron initiated with id 0 in layer 2
+(2020-01-09 12:18:41.116991) | Assigned random weights
+(2020-01-09 12:18:41.122969) | Loading in model line: ['1', '0', '[-0.9107523343842632,-0.9999911621826088,-0.9999934224063264,-0.9996880276828639,-0.999998980426664,-0.9999540424049778,-0.9999980452782031,-0.995078999999969]', '-0.004130000000000003']
+(2020-01-09 12:18:41.128023) | Loading in model line: ['1', '1', '[-0.3449027104988191,-0.17535131673484672,-0.07606984913879239,-0.1827153017090886,-0.22035319075213525,-0.12283108728073178,-0.142359013874134,-0.0765937934306749]', '-0.00743000000000001']
+(2020-01-09 12:18:41.133010) | Loading in model line: ['1', '2', '[-0.07557652315785779,0.2415575491553574,0.37532214449094253,0.1858772801152275,0.08516100473662144,0.5202741491608518,0.028284934544860117,0.534870000000000]', '-0.0044300000000000025']
+(2020-01-09 12:18:41.136118) | Loading in model line: ['2', '0', '[0.1643728062380375,-0.7453093911284255,0.1504551346999947]', '-0.004230000000000002']
+(2020-01-09 12:18:42.246470) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:18:42.246470) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:18:42.247985) | Neuron 2 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:18:42.252967) | Neuron 3 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:18:42.255072) | Neuron 4 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:18:42.255072) | Neuron 5 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:18:42.256070) | Neuron 6 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:18:42.259059) | Neuron 7 in layer: 0 has weights and biasNone bias: 0
+(2020-01-09 12:18:42.260057) | Neuron 0 in layer: 1 has weights and bias[-0.9107523343842632, -0.9999911621826088, -0.9999934224063264, -0.9996880276828639, -0.999998980426664, -0.9999540424049778, -0.9999980452782031, -0.99507899999996] bias: -0.004130000000000003
+(2020-01-09 12:18:42.263630) | Neuron 1 in layer: 1 has weights and bias[-0.3449027104988191, -0.17535131673484672, -0.07606984913879239, -0.1827153017090886, -0.22035319075213525, -0.12283108728073178, -0.142359013874134, -0.076593793430674] bias: -0.00743000000000001
+(2020-01-09 12:18:42.265625) | Neuron 2 in layer: 1 has weights and bias[-0.07557652315785779, 0.2415575491553574, 0.37532214449094253, 0.1858772801152275, 0.08516100473662144, 0.5202741491608518, 0.028284934544860117, 0.53487] bias: -0.0044300000000000025
+(2020-01-09 12:18:42.266620) | Neuron 3 in layer: 1 has weights and bias[0.5580930252324188, 0.2882566589980454, 0.19801160561606568, 0.39261788561460564, 0.5017258204725106, 0.8546452006068633, 0.5526620218893207, 0.49220691522094273] bias: 0
+(2020-01-09 12:18:42.267618) | Neuron 4 in layer: 1 has weights and bias[0.04759785077050338, 0.8625970710875084, 0.8535922986641203, 0.628509519210002, 0.4411675194573047, 0.7813541475515494, 0.6563360583549401, 0.9896472743185281] bias: 0
+(2020-01-09 12:18:42.271685) | Neuron 5 in layer: 1 has weights and bias[0.597699569101919, 0.24782522711630683, 0.47762926598023636, 0.6446666395673653, 0.8867268344926451, 0.7855699637555256, 0.1230614848146131, 0.636821155449404] bias: 0
+(2020-01-09 12:18:42.274976) | Neuron 0 in layer: 2 has weights and bias[0.1643728062380375, -0.7453093911284255, 0.150455134699994] bias: -0.004230000000000002
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    start = main()
+  File "main.py", line 23, in __init__
+    strategy = Strategy.Strategy(wallet,binance_client=client)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 31, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 49, in train
+    startfitness = eval()
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 45, in eval
+    fitness = self.fitness(self.run_over_data(data=data, interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 108, in run_over_data
+    afwijkingen.append(abs(self.model.predict(inputs=data[i:i + interval_size])-data[i+interval_size+1]))
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 41, in predict
+    activation_input_value = (np.sum(weights*values)+self.layers[l].neurons[n].bias)
+ValueError: operands could not be broadcast together with shapes (3,) (6,) 

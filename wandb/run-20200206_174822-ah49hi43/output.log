@@ -1,0 +1,24 @@
+(2020-02-06 18:48:24.619176) | Strategy init with wallet: BNBUSDT
+(2020-02-06 18:48:24.619176) | Interval that is fed to network has length: 5
+(2020-02-06 18:48:24.629157) | Neuron initiated with id 0 in layer 0
+(2020-02-06 18:48:24.631172) | Neuron initiated with id 1 in layer 0
+(2020-02-06 18:48:24.631691) | Neuron initiated with id 0 in layer 1
+(2020-02-06 18:48:24.637649) | Assigned random weights
+<_io.TextIOWrapper name='network.model' mode='r' encoding='cp1252'>
+(2020-02-06 18:48:24.639643) | Loading in model line: ['1', '0', '[0.514884141143734]', '0']
+Traceback (most recent call last):
+  File "main.py", line 55, in <module>
+    start = main()
+  File "main.py", line 36, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet,network_structure=netwerk)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 36, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 51, in train
+    fitness = eval(self.model)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 49, in eval
+    fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 92, in run_over_data
+    afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 46, in predict
+    outputs = self.activation_function((weights@values)+biases)
+ValueError: shapes (1,1) and (2,1) not aligned: 1 (dim 1) != 2 (dim 0)

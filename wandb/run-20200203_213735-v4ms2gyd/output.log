@@ -1,0 +1,75 @@
+(2020-02-03 22:37:37.526306) | Strategy init with wallet: BNBUSDT
+(2020-02-03 22:37:37.526306) | Interval that is fed to network has length: 32
+(2020-02-03 22:37:37.526738) | Neuron initiated with id 0 in layer 0
+(2020-02-03 22:37:37.526738) | Neuron initiated with id 1 in layer 0
+(2020-02-03 22:37:37.526738) | Neuron initiated with id 2 in layer 0
+(2020-02-03 22:37:37.526738) | Neuron initiated with id 3 in layer 0
+(2020-02-03 22:37:37.526738) | Neuron initiated with id 4 in layer 0
+(2020-02-03 22:37:37.526738) | Neuron initiated with id 5 in layer 0
+(2020-02-03 22:37:37.526738) | Neuron initiated with id 6 in layer 0
+(2020-02-03 22:37:37.526738) | Neuron initiated with id 7 in layer 0
+(2020-02-03 22:37:37.527739) | Neuron initiated with id 8 in layer 0
+(2020-02-03 22:37:37.528039) | Neuron initiated with id 9 in layer 0
+(2020-02-03 22:37:37.536382) | Neuron initiated with id 10 in layer 0
+(2020-02-03 22:37:37.536382) | Neuron initiated with id 11 in layer 0
+(2020-02-03 22:37:37.537361) | Neuron initiated with id 12 in layer 0
+(2020-02-03 22:37:37.537361) | Neuron initiated with id 13 in layer 0
+(2020-02-03 22:37:37.537361) | Neuron initiated with id 14 in layer 0
+(2020-02-03 22:37:37.537361) | Neuron initiated with id 15 in layer 0
+(2020-02-03 22:37:37.537361) | Neuron initiated with id 16 in layer 0
+(2020-02-03 22:37:37.537361) | Neuron initiated with id 17 in layer 0
+(2020-02-03 22:37:37.538358) | Neuron initiated with id 18 in layer 0
+(2020-02-03 22:37:37.538358) | Neuron initiated with id 19 in layer 0
+(2020-02-03 22:37:37.538358) | Neuron initiated with id 20 in layer 0
+(2020-02-03 22:37:37.538358) | Neuron initiated with id 21 in layer 0
+(2020-02-03 22:37:37.538358) | Neuron initiated with id 22 in layer 0
+(2020-02-03 22:37:37.538358) | Neuron initiated with id 23 in layer 0
+(2020-02-03 22:37:37.539355) | Neuron initiated with id 24 in layer 0
+(2020-02-03 22:37:37.539355) | Neuron initiated with id 25 in layer 0
+(2020-02-03 22:37:37.539355) | Neuron initiated with id 26 in layer 0
+(2020-02-03 22:37:37.539355) | Neuron initiated with id 27 in layer 0
+(2020-02-03 22:37:37.539355) | Neuron initiated with id 28 in layer 0
+(2020-02-03 22:37:37.539355) | Neuron initiated with id 29 in layer 0
+(2020-02-03 22:37:37.540419) | Neuron initiated with id 30 in layer 0
+(2020-02-03 22:37:37.540419) | Neuron initiated with id 31 in layer 0
+(2020-02-03 22:37:37.540419) | Neuron initiated with id 0 in layer 1
+(2020-02-03 22:37:37.540419) | Neuron initiated with id 1 in layer 1
+(2020-02-03 22:37:37.540419) | Neuron initiated with id 2 in layer 1
+(2020-02-03 22:37:37.540419) | Neuron initiated with id 3 in layer 1
+(2020-02-03 22:37:37.540419) | Neuron initiated with id 4 in layer 1
+(2020-02-03 22:37:37.541416) | Neuron initiated with id 5 in layer 1
+(2020-02-03 22:37:37.541416) | Neuron initiated with id 6 in layer 1
+(2020-02-03 22:37:37.541416) | Neuron initiated with id 7 in layer 1
+(2020-02-03 22:37:37.541416) | Neuron initiated with id 0 in layer 2
+(2020-02-03 22:37:37.541416) | Assigned random weights
+(2020-02-03 22:37:38.672780) | Starting fitness of network is: -106.493690
+-0.3809503027994623 -106.11274013687009
+(2020-02-03 22:38:03.810111) | saved network succesfully
+-0.3809503027994623 -105.73246986452357
+(2020-02-03 22:38:26.345394) | saved network succesfully
+-0.3809503027994623 -105.35337654168131
+(2020-02-03 22:38:50.362722) | saved network succesfully
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 32, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 60, in train
+    dir_list = [fitness-eval(model) for model in model_list]
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 60, in <listcomp>
+    dir_list = [fitness-eval(model) for model in model_list]
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 45, in eval
+    fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 87, in run_over_data
+    afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 44, in predict
+    weights = self.layers[l].weight_matrix()
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 22, in weight_matrix
+    return np.array([[w for w in neuron.weights] for neuron in self.neurons])
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 22, in <listcomp>
+    return np.array([[w for w in neuron.weights] for neuron in self.neurons])
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 22, in <listcomp>
+    return np.array([[w for w in neuron.weights] for neuron in self.neurons])
+KeyboardInterrupt

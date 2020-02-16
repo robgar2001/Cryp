@@ -1,0 +1,62 @@
+(2020-01-28 20:26:47.293192) | Strategy init with wallet: BNBUSDT
+(2020-01-28 20:26:47.294534) | Interval that is fed to network has length: 8
+(2020-01-28 20:26:47.295540) | Neuron initiated with id 0 in layer 0
+(2020-01-28 20:26:47.297643) | Neuron initiated with id 1 in layer 0
+(2020-01-28 20:26:47.307365) | Neuron initiated with id 2 in layer 0
+(2020-01-28 20:26:47.309909) | Neuron initiated with id 3 in layer 0
+(2020-01-28 20:26:47.311902) | Neuron initiated with id 4 in layer 0
+(2020-01-28 20:26:47.313012) | Neuron initiated with id 5 in layer 0
+(2020-01-28 20:26:47.324839) | Neuron initiated with id 6 in layer 0
+(2020-01-28 20:26:47.326861) | Neuron initiated with id 7 in layer 0
+(2020-01-28 20:26:47.328188) | Neuron initiated with id 0 in layer 1
+(2020-01-28 20:26:47.340833) | Neuron initiated with id 1 in layer 1
+(2020-01-28 20:26:47.342937) | Neuron initiated with id 0 in layer 2
+(2020-01-28 20:26:47.345175) | Assigned random weights
+(2020-01-28 20:26:52.065771) | Neuron 0 in layer: 0 has weights and biasNone bias: 0
+(2020-01-28 20:26:52.065771) | Neuron 1 in layer: 0 has weights and biasNone bias: 0
+(2020-01-28 20:26:52.072536) | Neuron 2 in layer: 0 has weights and biasNone bias: 0
+(2020-01-28 20:26:52.074562) | Neuron 3 in layer: 0 has weights and biasNone bias: 0
+(2020-01-28 20:26:52.081087) | Neuron 4 in layer: 0 has weights and biasNone bias: 0
+(2020-01-28 20:26:52.084085) | Neuron 5 in layer: 0 has weights and biasNone bias: 0
+(2020-01-28 20:26:52.087319) | Neuron 6 in layer: 0 has weights and biasNone bias: 0
+(2020-01-28 20:26:52.089318) | Neuron 7 in layer: 0 has weights and biasNone bias: 0
+(2020-01-28 20:26:52.095987) | Neuron 0 in layer: 1 has weights and bias[0.04013262613519031, 0.6201637066649629, 0.5915417485995798, 0.207885482580752, 0.5749183177505593, 0.9215860833891232, 0.14440862009425937, 0.8407338852353452] bias: 0
+(2020-01-28 20:26:52.104305) | Neuron 1 in layer: 1 has weights and bias[0.7148469043688163, 0.12111446591179442, 0.9028765049413421, 0.32397707912391793, 0.7923695905586775, 0.1757063446923739, 0.7666482762787731, 0.29376547181190593] bias: 0
+(2020-01-28 20:26:52.106622) | Neuron 0 in layer: 2 has weights and bias[0.8215144184344852, 0.6484518552430181] bias: 0
+(2020-01-28 20:26:52.247736) | -360.473681233645
+(2020-01-28 20:26:52.258300) | saved network succesfully
+(2020-01-28 20:26:52.258300) | Currently training: neuron 0 in layer: 1 tweaking weight number: 0
+(2020-01-28 20:26:52.431105) | -360.473681233645
+(2020-01-28 20:26:52.530987) | -359.9143049728748
+(2020-01-28 20:26:52.597413) | -361.03770410535725
+(2020-01-28 20:26:52.750077) | -359.9143049728748
+(2020-01-28 20:26:52.913288) | -359.3730098709299
+(2020-01-28 20:26:53.067826) | -358.8728912434108
+(2020-01-28 20:26:53.180417) | -358.38479223595965
+(2020-01-28 20:26:53.286530) | -357.91166686594534
+(2020-01-28 20:26:53.430340) | -357.4423894733413
+(2020-01-28 20:26:53.546383) | -356.9678876235823
+(2020-01-28 20:26:53.664732) | -356.4853285915856
+(2020-01-28 20:26:53.764095) | -355.9952660274191
+(2020-01-28 20:26:53.880864) | -355.51117145290965
+(2020-01-28 20:26:54.013539) | -355.0395962337353
+(2020-01-28 20:26:54.112853) | -354.608978685026
+(2020-01-28 20:26:54.231637) | -354.20995084366353
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    start = main()
+  File "main.py", line 23, in __init__
+    strategy = Strategy.Strategy(wallet,binance_client=client)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 30, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 63, in train
+    minfitness = eval()
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 43, in eval
+    fitness = self.fitness(self.run_over_data(data=data, interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 105, in run_over_data
+    afwijkingen.append(abs(abs(self.model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 44, in predict
+    biases = self.layers[l].bias_matrix()
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 26, in bias_matrix
+    return biaslist.reshape((M,1))
+KeyboardInterrupt

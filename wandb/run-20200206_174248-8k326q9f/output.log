@@ -1,0 +1,20 @@
+(2020-02-06 18:42:50.819487) | Strategy init with wallet: BNBUSDT
+(2020-02-06 18:42:50.819487) | Interval that is fed to network has length: 5
+(2020-02-06 18:42:50.820482) | Neuron initiated with id 0 in layer 0
+(2020-02-06 18:42:50.828475) | Neuron initiated with id 1 in layer 0
+(2020-02-06 18:42:50.831462) | Neuron initiated with id 0 in layer 1
+(2020-02-06 18:42:50.837462) | Assigned random weights
+(2020-02-06 18:42:51.666409) | Starting fitness of network is: -1.922411
+-0.004220080616789579 -1.9181910533173665
+Traceback (most recent call last):
+  File "main.py", line 55, in <module>
+    start = main()
+  File "main.py", line 36, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet,network_structure=netwerk)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 36, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 81, in train
+    self.model.save(filename=str(sys.argv[2:])+'.model')
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 79, in save
+    structure+=len(l.neurons)+'/'
+TypeError: unsupported operand type(s) for +: 'int' and 'str'

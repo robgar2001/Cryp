@@ -1,0 +1,18 @@
+(2020-02-03 21:10:26.203803) | Strategy init with wallet: BNBUSDT
+(2020-02-03 21:10:26.203803) | Interval that is fed to network has length: 2
+(2020-02-03 21:10:26.206425) | Neuron initiated with id 0 in layer 0
+(2020-02-03 21:10:26.207420) | Neuron initiated with id 1 in layer 0
+(2020-02-03 21:10:26.219198) | Neuron initiated with id 0 in layer 1
+(2020-02-03 21:10:26.226083) | Assigned random weights
+(2020-02-03 21:10:26.227789) | Loading in model line: ['1', '0', '[-0.13850930157138155,0.5268152300000]', '-0.0006400000000000004']
+(2020-02-03 21:10:27.332250) | -2.9724925406665723
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 32, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 54, in train
+    for w in range(len(self.model.layers[l].neurons[n].weights)):
+TypeError: len() of unsized object

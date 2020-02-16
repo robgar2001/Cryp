@@ -1,0 +1,17 @@
+(2020-02-06 18:52:43.099577) | Strategy init with wallet: BNBUSDT
+(2020-02-06 18:52:43.099577) | Interval that is fed to network has length: 5
+(2020-02-06 18:52:43.106404) | Neuron initiated with id 0 in layer 0
+(2020-02-06 18:52:43.108400) | Neuron initiated with id 1 in layer 0
+(2020-02-06 18:52:43.109396) | Neuron initiated with id 0 in layer 1
+(2020-02-06 18:52:43.116388) | Assigned random weights
+(2020-02-06 18:52:43.116388) | Loading network.model
+Traceback (most recent call last):
+  File "main.py", line 55, in <module>
+    start = main()
+  File "main.py", line 36, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet,network_structure=netwerk)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 30, in __init__
+    self.model.load()
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 62, in load
+    structure = file[0].strip('\n').split('/')
+TypeError: '_io.TextIOWrapper' object is not subscriptable

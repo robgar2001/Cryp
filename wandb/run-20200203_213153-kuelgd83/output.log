@@ -1,0 +1,73 @@
+(2020-02-03 22:31:56.529887) | Strategy init with wallet: BNBUSDT
+(2020-02-03 22:31:56.530799) | Interval that is fed to network has length: 32
+(2020-02-03 22:31:56.530799) | Neuron initiated with id 0 in layer 0
+(2020-02-03 22:31:56.530799) | Neuron initiated with id 1 in layer 0
+(2020-02-03 22:31:56.530799) | Neuron initiated with id 2 in layer 0
+(2020-02-03 22:31:56.531800) | Neuron initiated with id 3 in layer 0
+(2020-02-03 22:31:56.534529) | Neuron initiated with id 4 in layer 0
+(2020-02-03 22:31:56.535071) | Neuron initiated with id 5 in layer 0
+(2020-02-03 22:31:56.535071) | Neuron initiated with id 6 in layer 0
+(2020-02-03 22:31:56.535071) | Neuron initiated with id 7 in layer 0
+(2020-02-03 22:31:56.535071) | Neuron initiated with id 8 in layer 0
+(2020-02-03 22:31:56.536072) | Neuron initiated with id 9 in layer 0
+(2020-02-03 22:31:56.536072) | Neuron initiated with id 10 in layer 0
+(2020-02-03 22:31:56.536072) | Neuron initiated with id 11 in layer 0
+(2020-02-03 22:31:56.536072) | Neuron initiated with id 12 in layer 0
+(2020-02-03 22:31:56.537069) | Neuron initiated with id 13 in layer 0
+(2020-02-03 22:31:56.537069) | Neuron initiated with id 14 in layer 0
+(2020-02-03 22:31:56.537069) | Neuron initiated with id 15 in layer 0
+(2020-02-03 22:31:56.537069) | Neuron initiated with id 16 in layer 0
+(2020-02-03 22:31:56.538068) | Neuron initiated with id 17 in layer 0
+(2020-02-03 22:31:56.538068) | Neuron initiated with id 18 in layer 0
+(2020-02-03 22:31:56.538068) | Neuron initiated with id 19 in layer 0
+(2020-02-03 22:31:56.538068) | Neuron initiated with id 20 in layer 0
+(2020-02-03 22:31:56.539065) | Neuron initiated with id 21 in layer 0
+(2020-02-03 22:31:56.539065) | Neuron initiated with id 22 in layer 0
+(2020-02-03 22:31:56.539065) | Neuron initiated with id 23 in layer 0
+(2020-02-03 22:31:56.539065) | Neuron initiated with id 24 in layer 0
+(2020-02-03 22:31:56.540139) | Neuron initiated with id 25 in layer 0
+(2020-02-03 22:31:56.540139) | Neuron initiated with id 26 in layer 0
+(2020-02-03 22:31:56.540139) | Neuron initiated with id 27 in layer 0
+(2020-02-03 22:31:56.540139) | Neuron initiated with id 28 in layer 0
+(2020-02-03 22:31:56.541142) | Neuron initiated with id 29 in layer 0
+(2020-02-03 22:31:56.541142) | Neuron initiated with id 30 in layer 0
+(2020-02-03 22:31:56.541142) | Neuron initiated with id 31 in layer 0
+(2020-02-03 22:31:56.542137) | Neuron initiated with id 0 in layer 1
+(2020-02-03 22:31:56.542137) | Neuron initiated with id 1 in layer 1
+(2020-02-03 22:31:56.542137) | Neuron initiated with id 2 in layer 1
+(2020-02-03 22:31:56.542137) | Neuron initiated with id 3 in layer 1
+(2020-02-03 22:31:56.543134) | Neuron initiated with id 4 in layer 1
+(2020-02-03 22:31:56.543314) | Neuron initiated with id 5 in layer 1
+(2020-02-03 22:31:56.543314) | Neuron initiated with id 6 in layer 1
+(2020-02-03 22:31:56.543314) | Neuron initiated with id 7 in layer 1
+(2020-02-03 22:31:56.543314) | Neuron initiated with id 8 in layer 1
+(2020-02-03 22:31:56.544477) | Neuron initiated with id 9 in layer 1
+(2020-02-03 22:31:56.544477) | Neuron initiated with id 0 in layer 2
+(2020-02-03 22:31:56.545012) | Neuron initiated with id 1 in layer 2
+(2020-02-03 22:31:56.545012) | Neuron initiated with id 2 in layer 2
+(2020-02-03 22:31:56.545012) | Neuron initiated with id 3 in layer 2
+(2020-02-03 22:31:56.545784) | Neuron initiated with id 4 in layer 2
+(2020-02-03 22:31:56.545784) | Neuron initiated with id 5 in layer 2
+(2020-02-03 22:31:56.545784) | Neuron initiated with id 6 in layer 2
+(2020-02-03 22:31:56.545784) | Neuron initiated with id 7 in layer 2
+(2020-02-03 22:31:56.546784) | Neuron initiated with id 8 in layer 2
+(2020-02-03 22:31:56.547076) | Neuron initiated with id 9 in layer 2
+(2020-02-03 22:31:56.557524) | Neuron initiated with id 0 in layer 3
+(2020-02-03 22:31:56.557524) | Assigned random weights
+(2020-02-03 22:31:56.558527) | Loading in model line: ['1', '0', '[0.3612727272278785,0.3637062918]', '0.0']
+Traceback (most recent call last):
+  File "main.py", line 41, in <module>
+    start = main()
+  File "main.py", line 33, in __init__
+    strategy = Strategy.Strategy(binance_client=client,wallet=wallet)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 32, in __init__
+    self.train(network_da)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 47, in train
+    fitness = eval(self.model)
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 45, in eval
+    fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
+  File "C:\Users\robbe\PycharmProjects\Cryp\Strategy.py", line 87, in run_over_data
+    afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+  File "C:\Users\robbe\PycharmProjects\Cryp\AI\Model.py", line 46, in predict
+    outputs = self.activation_function((weights@values)+biases)
+TypeError: Object arrays are not currently supported
