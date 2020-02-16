@@ -95,7 +95,7 @@ class Model(object):
                 weights = '['
                 for x in n.weights:
                     weights+=str(x)+','
-                weights = weights[0:-2]
+                weights = weights[0:-1]
                 weights+=']'
                 file.write(str(n.layer_id)+'/'+str(n.neuron_id)+'/'+str(weights)+'/'+str(n.bias)+'\n')
         file.close()
