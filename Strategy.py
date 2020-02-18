@@ -12,11 +12,11 @@ import sys
 
 
 class Strategy(object):
-    def __init__(self,wallet=None,binance_client = None,symbol=None,load_method = None):
+    def __init__(self,wallet=None,binance_client = None,symbol=None,filename = 'network.model'):
         wandb.init(project="cryp")
         self.symbol = symbol
         self.binance_client = binance_client
-        self.model = Model.Model()
+        self.model = Model.Model(filename=filename)
         structure,fitness = self.model.load()
         self.model_interval = structure[0]
         Logger.Log('Interval that is fed to network has length: ' + str(self.model_interval))

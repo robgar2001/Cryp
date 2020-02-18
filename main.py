@@ -33,7 +33,7 @@ class main(object):
         """
         #de userinterface wordt gecheckt
         if sys.argv[1] == 'train':
-            strategy = Strategy.Strategy(symbol=sys.argv[2],binance_client=client)
+            strategy = Strategy.Strategy(symbol=sys.argv[2],binance_client=client,filename=sys.argv[3])
         elif sys.argv[1] == 'create':
             config = [int(sys.argv[i]) for i in range(3,len(sys.argv))]
             model = Model.Model()
@@ -52,9 +52,10 @@ class main(object):
             model = Model.Model()
             model.load(filename=model_filename)
             #correctional of 2 is needed
-            from_dt = datetime.datetime.now() - datetime.timedelta(minutes=(model.network_config[0]+2)*30)
+            from_dt = datetime.datetime.now() - datetime.timedelta(minutes=(model.network_config[0]+3)*30)
             Logger.Log(str(from_dt)+" till "+str(datetime.datetime.now()))
-            data = np.array(client.get_historical_klines(pair,interval=Client.KLINE_INTERVAL_30MINUTE,start_str=from_dt.ctime()))[:,1]
+            data = np.array(client.get_historical_klines(pair,interval=Client.KLINE_INTERVAL_30MINUTE,start_str=from_dt.ctime()))[:,1].astype(float)
+            data = [data[i]-data[i-1] for i in range(1,len(data))]
             Logger.Log("Model input size: "+str(model.network_config[0])+" / data size: "+str(data.shape[0]))
             print(data.astype(float))
             Logger.Log(model.predict(inputs=data.astype(float)))
