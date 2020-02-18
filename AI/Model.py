@@ -81,7 +81,7 @@ class Model(object):
             self.layers[int(data[0])].neurons[int(data[1])].bias = float(data[3])
         file.close()
         return structure,float(lines[1])
-    def save(self,filename='network.model',fitness = 0):
+    def save(self,filename='network.model',fitness = -9999999):
         Logger.Log('saving file')
         file = open(filename,'w')
         structure = ''

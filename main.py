@@ -55,10 +55,10 @@ class main(object):
             from_dt = datetime.datetime.now() - datetime.timedelta(minutes=(model.network_config[0]+3)*30)
             Logger.Log(str(from_dt)+" till "+str(datetime.datetime.now()))
             data = np.array(client.get_historical_klines(pair,interval=Client.KLINE_INTERVAL_30MINUTE,start_str=from_dt.ctime()))[:,1].astype(float)
-            data = [data[i]-data[i-1] for i in range(1,len(data))]
+            datan = np.array([data[i]/data[i-1]-1 for i in range(1,len(data))])
             Logger.Log("Model input size: "+str(model.network_config[0])+" / data size: "+str(data.shape[0]))
-            print(data.astype(float))
-            Logger.Log(model.predict(inputs=data.astype(float)))
+            prediction = model.predict(inputs=datan.astype(float))[0]
+            Logger.Log("Next candle change price predicted to be in percentage: "+str(prediction*100)+' or in base currency: '+str((prediction+1)*data[-1]))
         else:
             print('Action not specified')
 

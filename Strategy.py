@@ -16,8 +16,9 @@ class Strategy(object):
         wandb.init(project="cryp")
         self.symbol = symbol
         self.binance_client = binance_client
-        self.model = Model.Model(filename=filename)
-        structure,fitness = self.model.load()
+        self.filename = filename
+        self.model = Model.Model()
+        structure,fitness = self.model.load(filename=filename)
         self.model_interval = structure[0]
         Logger.Log('Interval that is fed to network has length: ' + str(self.model_interval))
         data = self.get_data(binance_client=binance_client)
@@ -92,7 +93,7 @@ class Strategy(object):
             if fitness>min_fitness:
                 min_fitness = fitness
             Logger.Log(str(maxdir)+' '+str(fitness)+' '+maxdir_type)
-            self.model.save(filename=str(sys.argv[2:])+'.model',fitness=fitness)
+            self.model.save(filename=self.filename,fitness=fitness)
 
 
         return
