@@ -24,13 +24,6 @@ class main(object):
                 attempt+=1
                 time.sleep(1)
         Logger.Log('Connection succesfull')
-        """
-        train 2:[pair] 3:[structuur or filename or none]
-        create [filename] [structuur]
-        run [pair] [filename]
-        simulate [pair] [filename]
-        predict [pair] [filename]
-        """
         #de userinterface wordt gecheckt
         if sys.argv[1] == 'train':
             strategy = Strategy.Strategy(symbol=sys.argv[2],binance_client=client,filename=sys.argv[3])

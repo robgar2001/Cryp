@@ -27,6 +27,7 @@ class Strategy(object):
         network_da = [float(float(network_data[i])/float(network_data[i-1]))-1 for i in range(1,len(network_data))]
         network_da = np.array(network_da)
         self.train(network_da)
+        #remove everything under this and the pandas package dependency if you want to run on raspberry pi
         df = pd.DataFrame({
             'real_price':network_da[self.model_interval:-1],
             'predicted_price':self.prediction_results(data=network_da,interval_size=self.model_interval)
@@ -36,7 +37,7 @@ class Strategy(object):
         df.plot(kind='line', y='predicted_price', color='red', ax=ax)
         plt.show()
 
-    def train(self,data,accuracy = 0.01):
+    def train(self,data,accuracy = 0.001):
         def eval(model):
             fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
             return fitness
@@ -81,13 +82,17 @@ class Strategy(object):
             if maxdir<=0 and maxdir_type!='None':
                 if maxdir_sub == True:
                     if maxdir_type == 'weight':
+                        Logger.Log('Subtracting form weight')
                         self.model.layers[maxdir_tup[0]].neurons[maxdir_tup[1]].weights[maxdir_tup[2]] -=accuracy
                     else:
+                        Logger.Log('Subtracting from bias')
                         self.model.layers[maxdir_tup[0]].neurons[maxdir_tup[1]].bias-=accuracy
                 else:
                     if maxdir_type == 'weight':
+                        Logger.Log('Adding to weight')
                         self.model.layers[maxdir_tup[0]].neurons[maxdir_tup[1]].weights[maxdir_tup[2]] +=accuracy
                     else:
+                        Logger.Log('Adding to bias')
                         self.model.layers[maxdir_tup[0]].neurons[maxdir_tup[1]].bias+=accuracy
             fitness = eval(self.model)
             if fitness>min_fitness:

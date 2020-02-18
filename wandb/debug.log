@@ -1,59 +1,65 @@
-2020-02-18 18:18:23,327 DEBUG   MainThread:6608 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
-2020-02-18 18:18:23,371 DEBUG   MainThread:6608 [util.py:is_cygwin_git():318] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Het systeem kan het opgegeven bestand niet vinden', None, 2, None)
-2020-02-18 18:18:23,379 DEBUG   MainThread:6608 [cmd.py:execute():728] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=<valid stream>)
-2020-02-18 18:18:23,457 DEBUG   MainThread:6608 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
-2020-02-18 18:18:23,538 DEBUG   MainThread:6608 [cmd.py:execute():728] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
-2020-02-18 18:18:23,657 DEBUG   MainThread:6608 [run_manager.py:__init__():535] Initialized sync for cryp/l7ha4vs4
-2020-02-18 18:18:23,667 INFO    MainThread:6608 [run_manager.py:wrap_existing_process():1133] wrapping existing process 19808
-2020-02-18 18:18:23,671 DEBUG   MainThread:6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
-2020-02-18 18:18:23,777 DEBUG   MainThread:6608 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 41171
-2020-02-18 18:18:23,837 INFO    MainThread:6608 [run_manager.py:init_run():918] system metrics and metadata threads started
-2020-02-18 18:18:23,844 INFO    MainThread:6608 [run_manager.py:init_run():952] upserting run before process can begin, waiting at most 10 seconds
-2020-02-18 18:18:23,862 DEBUG   Thread-20 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:24,115 DEBUG   Thread-20 :6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 511
-2020-02-18 18:18:24,132 INFO    Thread-20 :6608 [run_manager.py:_upsert_run():1037] saving patches
-2020-02-18 18:18:24,133 DEBUG   Thread-20 :6608 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
-2020-02-18 18:18:24,208 DEBUG   Thread-20 :6608 [cmd.py:execute():728] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
-2020-02-18 18:18:24,287 DEBUG   Thread-20 :6608 [cmd.py:execute():728] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
-2020-02-18 18:18:24,342 INFO    Thread-7  :6608 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_171821-l7ha4vs4\output.log
-2020-02-18 18:18:24,415 DEBUG   Thread-20 :6608 [cmd.py:execute():728] Popen(['git', 'version'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
-2020-02-18 18:18:24,583 DEBUG   Thread-20 :6608 [cmd.py:execute():728] Popen(['git', 'merge-base', 'HEAD', 'c9c7762287d646cf36b0c224918c33aa577e1821'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
-2020-02-18 18:18:24,669 INFO    Thread-20 :6608 [run_manager.py:_upsert_run():1041] saving pip packages
-2020-02-18 18:18:24,670 INFO    Thread-20 :6608 [run_manager.py:_upsert_run():1043] initializing streaming files api
-2020-02-18 18:18:24,672 INFO    Thread-20 :6608 [run_manager.py:_upsert_run():1050] unblocking file change observer, beginning sync with W&B servers
-2020-02-18 18:18:24,672 INFO    MainThread:6608 [run_manager.py:wrap_existing_process():1150] informing user process we are ready to proceed
-2020-02-18 18:18:24,673 INFO    Thread-7  :6608 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_171821-l7ha4vs4\wandb-metadata.json
-2020-02-18 18:18:24,676 INFO    MainThread:6608 [run_manager.py:_sync_etc():1257] entering loop for messages from user process
-2020-02-18 18:18:24,678 DEBUG   Thread-31 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:24,901 DEBUG   Thread-31 :6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
-2020-02-18 18:18:25,328 INFO    MainThread:6608 [run_manager.py:_sync_etc():1280] received message from user process: {"exitcode": 1}
-2020-02-18 18:18:25,328 INFO    MainThread:6608 [run_manager.py:_sync_etc():1366] closing log streams and sending exitcode to W&B
-2020-02-18 18:18:25,329 INFO    MainThread:6608 [run_manager.py:shutdown():1057] shutting down system stats and metadata service
-2020-02-18 18:18:25,338 INFO    Thread-7  :6608 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_171821-l7ha4vs4\output.log
-2020-02-18 18:18:25,338 INFO    Thread-7  :6608 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_171821-l7ha4vs4\diff.patch
-2020-02-18 18:18:25,339 INFO    Thread-7  :6608 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_171821-l7ha4vs4\requirements.txt
-2020-02-18 18:18:25,840 INFO    MainThread:6608 [run_manager.py:shutdown():1069] stopping streaming files and file change observer
-2020-02-18 18:18:26,340 INFO    Thread-7  :6608 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_171821-l7ha4vs4\wandb-metadata.json
-2020-02-18 18:18:26,341 INFO    MainThread:6608 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_171821-l7ha4vs4\wandb-events.jsonl
-2020-02-18 18:18:26,367 DEBUG   MainThread:6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:26,374 DEBUG   Thread-32 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:26,489 DEBUG   Thread-34 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:26,559 DEBUG   Thread-35 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:26,610 DEBUG   Thread-32 :6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 753
-2020-02-18 18:18:26,620 DEBUG   Thread-32 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
-2020-02-18 18:18:26,623 DEBUG   MainThread:6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 533
-2020-02-18 18:18:26,732 DEBUG   Thread-34 :6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 737
-2020-02-18 18:18:26,738 DEBUG   Thread-34 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
-2020-02-18 18:18:26,797 DEBUG   Thread-35 :6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 761
-2020-02-18 18:18:26,804 DEBUG   Thread-35 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
-2020-02-18 18:18:27,014 DEBUG   Thread-32 :6608 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/l7ha4vs4/wandb-metadata.json?Expires=1582046369&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=UL%2BoP0fM8NqdV2d7CSD%2FRJHQsy4VYc3hfiv4P58ABwaZBijb2MhVpi49JLXiFikDampLr%2B96Kbjq4sXRtKmxOzfvL9EsY3NvC0aszVgKyWSP3DXFKjCxV3sPKUzh%2FxqA0fY%2FXD2FcDWz7ueVj00IudueP3qXXSVI5xLYMcfZyzLvLG8IUT2nIVMIODKXdLgSOpV4MD3asGe9cb2ZfVWC62reBqEIZsbHPH54juXo5Fu7xSQEvwJ6koOeuAO31m0Cwf7cubIqfyygTXOaAgKAJujHgH7zTfzxpoD91HIQZWWOAKrmFwWuFMrWhE6UNa2%2BGkPeUxTZU2FEjDuOcPC2Vg%3D%3D HTTP/1.1" 200 0
-2020-02-18 18:18:27,163 DEBUG   Thread-34 :6608 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/l7ha4vs4/diff.patch?Expires=1582046369&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=GA3OqhTeim%2Fq7MTJ3zcwmPSJgH4kspEFR4V1aQztJ57lCY%2Fx7KFk12awGMC2OCsh5nwWf8LKUzlMtDPW43Fe4DNxeT%2BtBzN9rA2XvX6ztmzb6jBdy3VD50go7OUZBLbXJtXp7SgEEiDlXWgRYX5EVwI7K7oz4vDkAppGHcKLfNI8jaF5wMm%2BGLtTDI%2FECDpT3GPtEbupwkpi5kzlrNg1WxE2ctURIxJ6ALhZ0oFpL6J6Uy7DmjGttZ7droHi0zv9ZoZ%2Fv6SWvCJ8MdvrQ35Pm4JdN241K3H6Wgk1W6vUFriPQuXCFOevH%2FlKWVliuhtr1EJdEQO1fE7lnFyzqK8mKQ%3D%3D HTTP/1.1" 200 0
-2020-02-18 18:18:27,232 DEBUG   Thread-35 :6608 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/l7ha4vs4/requirements.txt?Expires=1582046369&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=SSlkuCOZSPSB%2BhoDbe21sOBID6VZzwYrRX6A2iDGuHWUppVj0BMZO1Cv61EJyuKKmvWG85sp7eIM3%2BBV8X46jBo4ZDR%2BUDAe%2Fr7odPyuBj0XPlfzxCCKuon%2Btu1JwHB7AG4SCEH6NnckXkOBot1kMbo4apjk1L2Wet8tbC01SRwacsV8DOGQ9d5I2ZhNUJ6%2FFnHFKAmq%2FyiK2IWhQsLxc9ZPkef41Cs9b1Cgh9fwp%2B%2Foh2Q92ZDldWTgs7QnrGTREZmnWBdNJw3BZYebZB3aqysxKUO%2FqG%2Bk9pTjbfVYWOWtcnCV4pqni%2FOBhNbaPsPCaICQ%2Bzg11F4ATE3amXBiJQ%3D%3D HTTP/1.1" 200 0
-2020-02-18 18:18:27,361 DEBUG   MainThread:6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:27,636 DEBUG   MainThread:6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 533
-2020-02-18 18:18:28,352 DEBUG   Thread-13 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:28,599 DEBUG   Thread-13 :6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/robgar2001/cryp/l7ha4vs4/file_stream HTTP/1.1" 200 311
-2020-02-18 18:18:28,663 DEBUG   Thread-37 :6608 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
-2020-02-18 18:18:28,791 DEBUG   Thread-13 :6608 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/robgar2001/cryp/l7ha4vs4/file_stream HTTP/1.1" 200 308
-2020-02-18 18:18:28,792 INFO    MainThread:6608 [run_manager.py:_sync_etc():1378] process only ran for 7 seconds, not syncing files
-2020-02-18 18:18:28,792 INFO    MainThread:6608 [l7ha4vs4:run_manager.py:_sync_etc():1378] process only ran for 7 seconds, not syncing files
+2020-02-18 18:58:29,665 DEBUG   MainThread:1572 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
+2020-02-18 18:58:29,713 DEBUG   MainThread:1572 [util.py:is_cygwin_git():318] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Het systeem kan het opgegeven bestand niet vinden', None, 2, None)
+2020-02-18 18:58:29,721 DEBUG   MainThread:1572 [cmd.py:execute():728] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-02-18 18:58:29,808 DEBUG   MainThread:1572 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
+2020-02-18 18:58:29,892 DEBUG   MainThread:1572 [cmd.py:execute():728] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
+2020-02-18 18:58:30,050 DEBUG   MainThread:1572 [run_manager.py:__init__():535] Initialized sync for cryp/uv8r8xrn
+2020-02-18 18:58:30,061 INFO    MainThread:1572 [run_manager.py:wrap_existing_process():1133] wrapping existing process 8544
+2020-02-18 18:58:30,065 DEBUG   MainThread:1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
+2020-02-18 18:58:30,199 DEBUG   MainThread:1572 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 41171
+2020-02-18 18:58:30,264 INFO    MainThread:1572 [run_manager.py:init_run():918] system metrics and metadata threads started
+2020-02-18 18:58:30,272 INFO    MainThread:1572 [run_manager.py:init_run():952] upserting run before process can begin, waiting at most 10 seconds
+2020-02-18 18:58:30,300 DEBUG   Thread-20 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:30,583 DEBUG   Thread-20 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 513
+2020-02-18 18:58:30,605 INFO    Thread-20 :1572 [run_manager.py:_upsert_run():1037] saving patches
+2020-02-18 18:58:30,606 DEBUG   Thread-20 :1572 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
+2020-02-18 18:58:30,679 INFO    Thread-7  :1572 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_175826-uv8r8xrn\output.log
+2020-02-18 18:58:30,724 DEBUG   Thread-20 :1572 [cmd.py:execute():728] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
+2020-02-18 18:58:30,835 DEBUG   Thread-20 :1572 [cmd.py:execute():728] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
+2020-02-18 18:58:30,990 DEBUG   Thread-20 :1572 [cmd.py:execute():728] Popen(['git', 'version'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
+2020-02-18 18:58:31,180 DEBUG   Thread-20 :1572 [cmd.py:execute():728] Popen(['git', 'merge-base', 'HEAD', '71496e517225a2b40bb853f031f78ffd0572715d'], cwd=C:\Users\robbe\PycharmProjects\Crypto, universal_newlines=False, shell=None, istream=None)
+2020-02-18 18:58:31,302 INFO    Thread-20 :1572 [run_manager.py:_upsert_run():1041] saving pip packages
+2020-02-18 18:58:31,304 INFO    Thread-20 :1572 [run_manager.py:_upsert_run():1043] initializing streaming files api
+2020-02-18 18:58:31,306 INFO    Thread-20 :1572 [run_manager.py:_upsert_run():1050] unblocking file change observer, beginning sync with W&B servers
+2020-02-18 18:58:31,306 INFO    MainThread:1572 [run_manager.py:wrap_existing_process():1150] informing user process we are ready to proceed
+2020-02-18 18:58:31,307 INFO    Thread-7  :1572 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_175826-uv8r8xrn\wandb-metadata.json
+2020-02-18 18:58:31,313 INFO    MainThread:1572 [run_manager.py:_sync_etc():1257] entering loop for messages from user process
+2020-02-18 18:58:31,315 DEBUG   Thread-31 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:31,570 DEBUG   Thread-31 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 46
+2020-02-18 18:58:31,677 INFO    Thread-7  :1572 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_175826-uv8r8xrn\output.log
+2020-02-18 18:58:31,678 INFO    Thread-7  :1572 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_175826-uv8r8xrn\requirements.txt
+2020-02-18 18:58:31,678 INFO    Thread-7  :1572 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_175826-uv8r8xrn\diff.patch
+2020-02-18 18:58:32,706 DEBUG   Thread-32 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:32,798 DEBUG   Thread-33 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:32,937 DEBUG   Thread-34 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:32,957 DEBUG   Thread-32 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 769
+2020-02-18 18:58:32,966 DEBUG   Thread-32 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-02-18 18:58:33,035 DEBUG   Thread-33 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 759
+2020-02-18 18:58:33,045 DEBUG   Thread-33 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-02-18 18:58:33,187 DEBUG   Thread-34 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 739
+2020-02-18 18:58:33,198 DEBUG   Thread-34 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-02-18 18:58:33,449 DEBUG   Thread-32 :1572 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/uv8r8xrn/wandb-metadata.json?Expires=1582048775&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=FjE98z6QNbaFq2yUe1OQD3Y8ERCBRsHq4MjFTkHoyg0onS6G1r0ia%2BpFDAPdfnVbmNuAtjGoVaLmjvDXdbYgUKWUG8HamuDOxKDyXOIJA17Auss6BJJETxSYpWOz%2F0UfhsY%2Bmi4nE5iq72WBZCLrU%2FYQweSaVFxwu8beH%2BZ4X%2BY8qXpKBx1AF8oKvsjH32G03wEyJ3RhKnyWTgSBTyJRBgJpgoeymmK%2BLCtt%2FovWuvPehqDGn%2FIdJk%2B%2Bqng9hnEQaRyLVUvl9nFvh7KqSYfXTJh4Q3Wy4bwa5ibzwve%2FlG7naF2v9X39%2FtUI4zPnRui%2FJmAHT5onEvOr3xoCxUVeZQ%3D%3D HTTP/1.1" 200 0
+2020-02-18 18:58:33,494 DEBUG   Thread-33 :1572 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/uv8r8xrn/requirements.txt?Expires=1582048775&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=GHN5exy6sHeroFqcJEu8x%2FL4uBng800gYko3mtm3a1YgDA2j5B25Ua9SrRrpNr1QwqFx5mYFhsVyB5o%2FBtWHOFh%2BcARcEVEaBEDPuZ0LgO38QWjfeA5u5Sg36wTTgU4NnBScSA8ULLlGK89AOSno9Yp8lG8Gzpjk%2BeDDq1HaD3U3O9G%2FqnaZvc%2FdiOQ0GAN33ATGzvShcR85f7oJvBrr%2Bna91h1Wz8k02AHPn0%2FwEN0lmEB%2F3Bisj9UXTwQyy8gSHqqjGhyxpg89rZBieZ3e%2F0TerE0a17NQh%2FwdyJtvzBMUw6EmcOZbWaURFqNOt07vxT%2FUwfCrNvmD2UM6Oz8pMw%3D%3D HTTP/1.1" 200 0
+2020-02-18 18:58:33,724 DEBUG   Thread-34 :1572 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/uv8r8xrn/diff.patch?Expires=1582048775&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=kwRUanRnjerKMpJfpxPZY0m%2BjeRgvelZSVvsC7llWFQQXuQPKrxJK1hniM7K5CzUV9gvyl4GdzLfBlWjdYgul51kjcRss8%2Fl66hmcApXCY6O6L%2BfDxX5gm1dE93Xf5YGrOse9ZSooAWpPPWw8AWJzl7WA5QhfmtIhB9CLDlP7nHMD7BupfeHCwlCiZoYQ44bEfl5vcTkt4IY8r5MDjQNxPhEEzzN2BraFyLV%2FEU0q5%2FF%2FIIW5om0l9y3sWhZjG9sxugK3cIRPV%2BYaK%2BptADHUhPXMaseNa2RrwbLndkhHXBnky4c5TGjofiVffMZFCpWwTcZgXXiX9e2RPS5K6ib0Q%3D%3D HTTP/1.1" 200 0
+2020-02-18 18:58:43,326 INFO    MainThread:1572 [run_manager.py:_sync_etc():1280] received message from user process: {"exitcode": 0}
+2020-02-18 18:58:43,327 INFO    MainThread:1572 [run_manager.py:_sync_etc():1366] closing log streams and sending exitcode to W&B
+2020-02-18 18:58:43,331 INFO    MainThread:1572 [run_manager.py:shutdown():1057] shutting down system stats and metadata service
+2020-02-18 18:58:43,333 DEBUG   Thread-13 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:43,694 DEBUG   Thread-13 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/robgar2001/cryp/uv8r8xrn/file_stream HTTP/1.1" 200 311
+2020-02-18 18:58:43,698 INFO    Thread-7  :1572 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_175826-uv8r8xrn\output.log
+2020-02-18 18:58:43,699 INFO    Thread-7  :1572 [run_manager.py:_on_file_created():671] file/dir created: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_175826-uv8r8xrn\wandb-events.jsonl
+2020-02-18 18:58:44,274 INFO    MainThread:1572 [run_manager.py:shutdown():1069] stopping streaming files and file change observer
+2020-02-18 18:58:44,700 INFO    Thread-7  :1572 [run_manager.py:_on_file_modified():682] file/dir modified: C:\Users\robbe\PycharmProjects\Crypto\wandb\run-20200218_175826-uv8r8xrn\wandb-metadata.json
+2020-02-18 18:58:44,725 DEBUG   MainThread:1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:44,994 DEBUG   MainThread:1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 535
+2020-02-18 18:58:45,741 DEBUG   MainThread:1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:45,881 DEBUG   Thread-13 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/robgar2001/cryp/uv8r8xrn/file_stream HTTP/1.1" 200 311
+2020-02-18 18:58:46,001 DEBUG   MainThread:1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 535
+2020-02-18 18:58:47,057 DEBUG   Thread-37 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-02-18 18:58:47,161 DEBUG   Thread-13 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/robgar2001/cryp/uv8r8xrn/file_stream HTTP/1.1" 200 308
+2020-02-18 18:58:47,163 INFO    MainThread:1572 [run_manager.py:_sync_etc():1418] syncing files to cloud storage
+2020-02-18 18:58:47,307 DEBUG   Thread-37 :1572 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 759
+2020-02-18 18:58:47,317 DEBUG   Thread-37 :1572 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-02-18 18:58:47,790 DEBUG   Thread-37 :1572 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/robgar2001/cryp/uv8r8xrn/___batch_archive_1.tgz?Expires=1582048790&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=Ekjm99CRURXkkMDKeIZwaQDF%2FPbZLeLhFZmVewWOQ27ai9zSj5vu6i1uw%2BLtSBM0LFJdR6zi8ftEpn1gRYsKWEX8U5UU73pk6bTkeCp3SOHeR4YwQ42CAToKrdQEFjRG3MfBwKFb94PHb39MCV6Wlh2QrJqMfjS2RU3WxNxntRhFUJ2LM%2B53B1K2TFcX0D088BCe4jOx7Q5haoDJ8gK6rPn7j9jJuOpKWVKcSRLOuAKJw4tYwS0G3d0kEIXSHU9AtK8uv8pZoHScm8ZBNBRqEbRmSTQYCDVF6O5nvq%2F9WL8MeROQSUTcH1uLWZKazZmeDSdsi%2F9pL2inq%2BDosdcpdw%3D%3D HTTP/1.1" 200 0
+2020-02-18 18:58:48,929 INFO    MainThread:1572 [run_manager.py:_sync_etc():1433] syncing complete: https://app.wandb.ai/robgar2001/cryp/runs/uv8r8xrn
+2020-02-18 18:58:48,929 INFO    MainThread:1572 [uv8r8xrn:run_manager.py:_sync_etc():1433] syncing complete: https://app.wandb.ai/robgar2001/cryp/runs/uv8r8xrn
