@@ -37,7 +37,7 @@ class Strategy(object):
         df.plot(kind='line', y='predicted_price', color='red', ax=ax)
         plt.show()
 
-    def train(self,data,accuracy = 0.001):
+    def train(self,data,accuracy = 0.000001):
         def eval(model):
             fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
             return fitness

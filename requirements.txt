@@ -1,3 +1,5 @@
 python-binance
 numpy
 wandb
+pandas
+matplotlib
