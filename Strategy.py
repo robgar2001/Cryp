@@ -9,10 +9,11 @@ import wandb
 import datetime
 import copy
 import sys
+import Data
 
 
 class Strategy(object):
-    def __init__(self,wallet=None,binance_client = None,symbol=None,filename = 'network.model'):
+    def __init__(self,symbol: str,binance_client : Client ,filename = 'network.model'):
         wandb.init(project="cryp")
         self.symbol = symbol
         self.binance_client = binance_client
@@ -21,23 +22,24 @@ class Strategy(object):
         structure,fitness = self.model.load(filename=filename)
         self.model_interval = structure[0]
         Logger.Log('Interval that is fed to network has length: ' + str(self.model_interval))
-        data = self.get_data(binance_client=binance_client)
-        network_data = np.array(data)[:,1]
-        network_data = [float(data) for data in network_data]
-        network_da = [float(float(network_data[i])/float(network_data[i-1]))-1 for i in range(1,len(network_data))]
-        network_da = np.array(network_da)
-        self.train(network_da)
-        #remove everything under this and the pandas package dependency if you want to run on raspberry pi
+        #call datamanager for data
+        self.datamanager = Data.DataManager(client=binance_client,symbol=symbol,klineinterval=Client.KLINE_INTERVAL_30MINUTE)
+        data = self.datamanager.get_data()
+        for x in data:
+            print(float(x))
+        self.train(data=data)
+        real_price = [x.data for x in data[self.model_interval:-1]]
         df = pd.DataFrame({
-            'real_price':network_da[self.model_interval:-1],
-            'predicted_price':self.prediction_results(data=network_da,interval_size=self.model_interval)
+            'real_price': real_price,
+            'predicted_price': self.prediction_results(data=data, interval_size=self.model_interval)
         })
+        print(data[self.model_interval],self.prediction_results(data=data, interval_size=self.model_interval))
         ax = plt.gca()
         df.plot(kind='line', y='real_price', ax=ax)
         df.plot(kind='line', y='predicted_price', color='red', ax=ax)
         plt.show()
 
-    def train(self,data,accuracy = 0.000001):
+    def train(self,data,accuracy = 0.01):
         def eval(model):
             fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
             return fitness
@@ -111,13 +113,9 @@ class Strategy(object):
     def run_over_data(self,data,interval_size,model):
         afwijkingen = []
         for i in range(len(data) - interval_size-1):
-            afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size+1])))
+            #carefull with slicing of data, when slicing the last given element is not taken with it in the slice
+            afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size])))
         return afwijkingen
-    def get_data(self,binance_client = None,klineinterval = Client.KLINE_INTERVAL_30MINUTE,datetime_start = None,datetime_end = None):
-        data = binance_client.get_historical_klines(self.symbol,klineinterval,'28 Januari, 2020','31 Januari, 2020')
-        #data = binance_client.get_historical_klines(self.wallet.symbol,klineinterval,'25 Januari, 2020',datetime.datetime.now().ctime())
-
-        return data
     def prediction_results(self,data,interval_size):
         voorspellingen = []
         for i in range(len(data) - interval_size-1):
