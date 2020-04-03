@@ -31,6 +31,11 @@ class Model(object):
     def activation_function(self,value):
         return (np.tanh(value))
     def predict(self,inputs):
+        Logger.Log('Prediction started')
+        #only possible when inputs have an id associated with them
+        ids = [i.id for i in inputs]
+        Logger.Log('id range of the data in this run: %i-%i'%(min(ids),max(ids)))
+        del ids
         inputs = [float(i) for i in inputs]
         if len(inputs) != len(self.layers[0].neurons):
             Logger.Log('Input size is different from input layer size')

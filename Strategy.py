@@ -29,17 +29,18 @@ class Strategy(object):
             print(float(x))
         self.train(data=data)
         real_price = [x.data for x in data[self.model_interval:-1]]
+        real_prediction_results = [x.data for x in self.prediction_results(data=data, interval_size=self.model_interval)]
+
         df = pd.DataFrame({
             'real_price': real_price,
-            'predicted_price': self.prediction_results(data=data, interval_size=self.model_interval)
+            'predicted_price': real_prediction_results
         })
-        print(data[self.model_interval],self.prediction_results(data=data, interval_size=self.model_interval))
         ax = plt.gca()
         df.plot(kind='line', y='real_price', ax=ax)
         df.plot(kind='line', y='predicted_price', color='red', ax=ax)
         plt.show()
 
-    def train(self,data,accuracy = 0.01):
+    def train(self,data,accuracy = 0.1):
         def eval(model):
             fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
             return fitness
@@ -81,8 +82,8 @@ class Strategy(object):
                             maxdir = min(dir_list)
                             maxdir_tup = (l,n,w)
                             maxdir_type = 'weight'
-            if maxdir<=0 and maxdir_type!='None':
-                if maxdir_sub == True:
+            if maxdir <= 0 and maxdir_type != 'None':
+                if maxdir_sub:
                     if maxdir_type == 'weight':
                         Logger.Log('Subtracting form weight')
                         self.model.layers[maxdir_tup[0]].neurons[maxdir_tup[1]].weights[maxdir_tup[2]] -=accuracy
@@ -101,8 +102,6 @@ class Strategy(object):
                 min_fitness = fitness
             Logger.Log(str(maxdir)+' '+str(fitness)+' '+maxdir_type)
             self.model.save(filename=self.filename,fitness=fitness)
-
-
         return
 
     def fitness(self,afwijkingen):
@@ -110,19 +109,21 @@ class Strategy(object):
         #Logger.Log(-((np.sum(afwijkingen)+1)**2))
         return -((np.sum(afwijkingen)+1)**2)
 
-    def run_over_data(self,data,interval_size,model):
+    def run_over_data(self, data, interval_size, model):
         afwijkingen = []
         for i in range(len(data) - interval_size-1):
             #carefull with slicing of data, when slicing the last given element is not taken with it in the slice
+            #checked, the right information is fed to the network
             afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size])))
+        print(afwijkingen)
         return afwijkingen
-    def prediction_results(self,data,interval_size):
+    def prediction_results(self, data, interval_size):
         voorspellingen = []
         for i in range(len(data) - interval_size-1):
-            voorspellingen.append(self.model.predict(inputs=data[i:i + interval_size]).tolist()[0][0])
+            #id's must be matched
+            voorspellingen.append(PredictionResult(id=i+interval_size,data=self.model.predict(inputs=data[i:i + interval_size]).tolist()[0][0]))
         return voorspellingen
-    def init_strategy(self):
-        Logger.Log('Starting algorithm')
-        Logger.Log('Placing buy order')
 
-
+class PredictionResult(Data.Candle):
+    def __init__(self,id,data):
+        super().__init__(id=id,data=data)

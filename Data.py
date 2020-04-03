@@ -4,11 +4,15 @@ import numpy as np
 import Logger
 
 class DataManager(object):
+    """
+    The datamanager class is used as a container to store the incomming kline data and normalize it.
+    """
     def __init__(self,client : Client,symbol : str,klineinterval):
         Logger.Log('Creating DataManager')
         self.client = client
         self.candles = []
         raw_data = get_binance_data(binance_client=client,symbol=symbol,klineinterval=klineinterval)
+        Logger.Log('Stored price data of %i klines '%(len(raw_data)))
         for i in range(1,len(raw_data)):
             self+=float(raw_data[i])/float(raw_data[i-1])-1
     def __add__(self, other):
