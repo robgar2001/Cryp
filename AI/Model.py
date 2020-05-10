@@ -12,6 +12,8 @@ class Neuron(object):
         self.layer_id = layer_id
         self.neuron_id = neuron_id
         Logger.Log('Neuron initiated with id '+str(self.neuron_id)+' in layer '+str(self.layer_id))
+    def __str__(self):
+        return "".join(self.weights)
 class Layer(object):
     def __init__(self,N_neurons,L_Layers_N_neuron,layer_id=None):
         self.layer_id = layer_id

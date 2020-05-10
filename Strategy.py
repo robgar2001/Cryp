@@ -11,6 +11,8 @@ import copy
 import sys
 import Data
 
+import GradientDescent
+
 
 class Strategy(object):
     def __init__(self,symbol: str,binance_client : Client ,filename = 'network.model'):
@@ -27,20 +29,22 @@ class Strategy(object):
         data = self.datamanager.get_data()
         for x in data:
             print(float(x))
-        self.train(data=data)
-        real_price = [x.data for x in data[self.model_interval:-1]]
-        real_prediction_results = [x.data for x in self.prediction_results(data=data, interval_size=self.model_interval)]
+        gd = GradientDescent.GradientDescent(self.model)
+        gd.start()
+        # self.train(data=data)
+        # real_price = [x.data for x in data[self.model_interval:-1]]
+        # real_prediction_results = [x.data for x in self.prediction_results(data=data, interval_size=self.model_interval)]
+        #
+        # df = pd.DataFrame({
+        #     'real_price': real_price,
+        #     'predicted_price': real_prediction_results
+        # })
+        # ax = plt.gca()
+        # df.plot(kind='line', y='real_price', ax=ax)
+        # df.plot(kind='line', y='predicted_price', color='red', ax=ax)
+        # plt.show()
 
-        df = pd.DataFrame({
-            'real_price': real_price,
-            'predicted_price': real_prediction_results
-        })
-        ax = plt.gca()
-        df.plot(kind='line', y='real_price', ax=ax)
-        df.plot(kind='line', y='predicted_price', color='red', ax=ax)
-        plt.show()
-
-    def train(self,data,accuracy = 0.1):
+    def train(self,data,accuracy = 0.0001):
         def eval(model):
             fitness = self.fitness(self.run_over_data(data=data, model=model,interval_size=self.model_interval))
             return fitness
