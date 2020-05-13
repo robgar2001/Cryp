@@ -12,6 +12,7 @@ class DataManager(object):
         self.client = client
         self.candles = []
         raw_data = get_binance_data(binance_client=client,symbol=symbol,klineinterval=klineinterval)
+        self.raw_data = raw_data
         Logger.Log('Stored price data of %i klines '%(len(raw_data)))
         for i in range(1,len(raw_data)):
             self+=float(raw_data[i])/float(raw_data[i-1])-1
@@ -21,6 +22,11 @@ class DataManager(object):
         return self
     def get_data(self):
         return sorted(self.candles,key=lambda x: self.candles[self.candles.index(x)].id)
+    def reconstruct_raw_data(self,price_change_list:list):
+        raw_data = []
+        for i in range(len(price_change_list)):
+            raw_data.append(float(self.raw_data[i])*(float(price_change_list[i])+1))
+        return raw_data
 
 
 def get_binance_data(binance_client,symbol,klineinterval):

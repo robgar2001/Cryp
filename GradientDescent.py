@@ -16,7 +16,6 @@ class GradientDescent():
         self.data = data
         self.interval_size = interval_size
     def start(self):
-        print(self.model)
         self.fitness1 = self.fitness(self.model)
         Logger.Log('STARTING FITNESS IS: '+str(self.fitness1))
         for l in range(1,len(self.model.layers)):
@@ -25,12 +24,10 @@ class GradientDescent():
                     self.partial_gradient_threads.append(threading.Thread(target=self.partial_derivative_of_neuron,kwargs={'neuron':self.model.layers[l].neurons[n],'model':copy.deepcopy(self.model),'result_dic':self.gradientDic,'weight_id':w}))
                     self.partial_gradient_threads[-1].start()
         Logger.Log('Waiting for threads to join')
-        thread_results = {}
-        print(self.partial_gradient_threads)
         for thread in self.partial_gradient_threads:
             thread.join()
         Logger.Log('Threads finished executing')
-        print(self.gradientDic)
+        return self.gradientDic
 
     def run_over_data(self, data, interval_size, model):
         afwijkingen = []
@@ -53,6 +50,6 @@ class GradientDescent():
         fitness1 = self.fitness1
         model.layers[neuron.layer_id].neurons[neuron.neuron_id].weights[weight_id] += sense
         fitness2 = self.fitness(model)
-        gradient = (fitness2-fitness1)/sense
-        result_dic.__setitem__((neuron.layer_id,neuron.neuron_id),gradient)
+        gradient = (abs(fitness2)-abs(fitness1))/sense
+        result_dic.__setitem__((neuron.layer_id,neuron.neuron_id,weight_id),gradient)
         return 0
