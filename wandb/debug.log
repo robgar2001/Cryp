@@ -1,25 +1,21 @@
-2020-05-13 23:02:28,149 DEBUG   MainThread:12064 [wandb_config.py:_load_defaults():119] no defaults not found in config-defaults.yaml
-2020-05-13 23:02:28,186 DEBUG   MainThread:12064 [meta.py:setup():97] code probe starting
-2020-05-13 23:02:28,186 DEBUG   MainThread:12064 [meta.py:setup():101] non time limited probe of code
-2020-05-13 23:02:28,197 DEBUG   MainThread:12064 [util.py:is_cygwin_git():314] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Het systeem kan het opgegeven bestand niet vinden', None, 2, None)
-2020-05-13 23:02:28,200 DEBUG   MainThread:12064 [meta.py:_setup_code_git():49] probe for git information
-2020-05-13 23:02:28,203 DEBUG   MainThread:12064 [cmd.py:execute():719] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\robbe\PycharmProjects\Cryp, universal_newlines=False, shell=None, istream=<valid stream>)
-2020-05-13 23:02:28,356 DEBUG   MainThread:12064 [cmd.py:execute():719] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\robbe\PycharmProjects\Cryp, universal_newlines=False, shell=None, istream=None)
-2020-05-13 23:02:28,533 DEBUG   MainThread:12064 [meta.py:_setup_code_program():58] save program starting
-2020-05-13 23:02:28,534 DEBUG   MainThread:12064 [meta.py:_setup_code_program():60] save program starting: C:/Users/robbe/PycharmProjects/Cryp\.\main.py
-2020-05-13 23:02:28,536 DEBUG   MainThread:12064 [meta.py:_setup_code_program():65] save program saved: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200513_210224-2u25jnaj\code\main.py
-2020-05-13 23:02:28,536 DEBUG   MainThread:12064 [meta.py:_setup_code_program():67] save program
-2020-05-13 23:02:28,550 DEBUG   MainThread:12064 [meta.py:setup():119] code probe done
-2020-05-13 23:02:28,561 DEBUG   MainThread:12064 [run_manager.py:__init__():541] Initialized sync for cryp/2u25jnaj
-2020-05-13 23:02:28,568 INFO    MainThread:12064 [run_manager.py:wrap_existing_process():1144] wrapping existing process 21688
-2020-05-13 23:02:28,572 DEBUG   MainThread:12064 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
-2020-05-13 23:02:28,780 DEBUG   MainThread:12064 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 43742
-2020-05-13 23:02:28,914 INFO    MainThread:12064 [run_manager.py:init_run():924] system metrics and metadata threads started
-2020-05-13 23:02:28,923 INFO    MainThread:12064 [run_manager.py:wrap_existing_process():1161] informing user process we are ready to proceed
-2020-05-13 23:02:28,924 INFO    MainThread:12064 [run_manager.py:_sync_etc():1268] entering loop for messages from user process
-2020-05-13 23:02:29,175 INFO    Thread-7  :12064 [run_manager.py:_on_file_modified():688] file/dir modified: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200513_210224-2u25jnaj\config.yaml
-2020-05-13 23:06:06,362 INFO    MainThread:12064 [run_manager.py:_sync_etc():1324] process received interrupt signal, shutting down
-2020-05-13 23:06:06,368 INFO    MainThread:12064 [run_manager.py:_sync_etc():1377] closing log streams and sending exitcode to W&B
-2020-05-13 23:06:06,369 INFO    MainThread:12064 [run_manager.py:shutdown():1068] shutting down system stats and metadata service
-25jnaj:run_manager.py:_sync_etc():1377] closing log streams and sending exitcode to W&B
-2020-05-13 23:06:06,369 INFO    MainThread:12064 [2u25jnaj:run_manager.py:shutdown():1068] shutting down system stats and metadata service
+2020-05-16 18:15:50,018 DEBUG   MainThread:12700 [wandb_config.py:_load_defaults():119] no defaults not found in config-defaults.yaml
+2020-05-16 18:15:50,040 DEBUG   MainThread:12700 [meta.py:setup():97] code probe starting
+2020-05-16 18:15:50,040 DEBUG   MainThread:12700 [meta.py:setup():101] non time limited probe of code
+2020-05-16 18:15:50,050 DEBUG   MainThread:12700 [util.py:is_cygwin_git():314] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'Het systeem kan het opgegeven bestand niet vinden', None, 2, None)
+2020-05-16 18:15:50,052 DEBUG   MainThread:12700 [meta.py:_setup_code_git():49] probe for git information
+2020-05-16 18:15:50,053 DEBUG   MainThread:12700 [cmd.py:execute():719] Popen(['git', 'cat-file', '--batch-check'], cwd=C:\Users\robbe\PycharmProjects\Cryp, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-05-16 18:15:50,119 DEBUG   MainThread:12700 [cmd.py:execute():719] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=C:\Users\robbe\PycharmProjects\Cryp, universal_newlines=False, shell=None, istream=None)
+2020-05-16 18:15:50,194 DEBUG   MainThread:12700 [meta.py:_setup_code_program():58] save program starting
+2020-05-16 18:15:50,194 DEBUG   MainThread:12700 [meta.py:_setup_code_program():60] save program starting: C:/Users/robbe/PycharmProjects/Cryp/main.py
+2020-05-16 18:15:50,195 DEBUG   MainThread:12700 [meta.py:_setup_code_program():65] save program saved: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200516_161549-f6dyc3vv\code\main.py
+2020-05-16 18:15:50,195 DEBUG   MainThread:12700 [meta.py:_setup_code_program():67] save program
+2020-05-16 18:15:50,201 DEBUG   MainThread:12700 [meta.py:setup():119] code probe done
+2020-05-16 18:15:50,205 DEBUG   MainThread:12700 [run_manager.py:__init__():541] Initialized sync for cryp/f6dyc3vv
+2020-05-16 18:15:50,212 INFO    MainThread:12700 [run_manager.py:wrap_existing_process():1144] wrapping existing process 14460
+2020-05-16 18:15:50,213 DEBUG   MainThread:12700 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
+2020-05-16 18:15:50,349 DEBUG   MainThread:12700 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 43742
+2020-05-16 18:15:50,411 INFO    MainThread:12700 [run_manager.py:init_run():924] system metrics and metadata threads started
+2020-05-16 18:15:50,411 INFO    MainThread:12700 [run_manager.py:wrap_existing_process():1161] informing user process we are ready to proceed
+2020-05-16 18:15:50,411 INFO    MainThread:12700 [run_manager.py:_sync_etc():1268] entering loop for messages from user process
+2020-05-16 18:15:51,039 INFO    Thread-7  :12700 [run_manager.py:_on_file_modified():688] file/dir modified: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200516_161549-f6dyc3vv\config.yaml
+2020-05-16 18:15:51,039 INFO    Thread-7  :12700 [f6dyc3vv:run_manager.py:_on_file_modified():688] file/dir modified: C:\Users\robbe\PycharmProjects\Cryp\wandb\run-20200516_161549-f6dyc3vv\config.yaml

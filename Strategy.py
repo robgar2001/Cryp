@@ -3,8 +3,8 @@ from binance.client import Client
 import numpy as np
 from AI import Model
 import Wallet
-#import pandas as pd
-#import matplotlib.pyplot as plt
+import pandas as pd
+import matplotlib.pyplot as plt
 import wandb
 import datetime
 import copy
@@ -15,7 +15,7 @@ import GradientDescent
 
 
 class Strategy(object):
-    def __init__(self,symbol: str,binance_client : Client ,filename = 'network.model',learning_rate = 0.01):
+    def __init__(self,symbol: str,binance_client : Client ,filename = 'network.model',learning_rate = 0.00001):
         wandb.init(project="cryp")
         self.learning_rate = learning_rate
         self.symbol = symbol
@@ -36,19 +36,19 @@ class Strategy(object):
             gradient_updates = gd.start()
             self.update_model_from_gradient_dic(gradient_dic=gradient_updates)
             self.model.save(fitness=gd.fitness1)
-            # if not (i%100):
-            #
-            #     real_price = [x.data for x in data[self.model_interval:-1]]
-            #     predicted_price_data = self.prediction_run()
-            #
-            #     df = pd.DataFrame({
-            #         'real_price': real_price,
-            #         'predicted_price': predicted_price_data
-            #     })
-            #     ax = plt.gca()
-            #     df.plot(kind='line', y='real_price', ax=ax)
-            #     df.plot(kind='line', y='predicted_price', color='red', ax=ax)
-            #     plt.show()
+            if not (i%100):
+
+                real_price = [x.data for x in data[self.model_interval:-1]]
+                predicted_price_data = self.prediction_run()
+
+                df = pd.DataFrame({
+                    'real_price': real_price,
+                    'predicted_price': predicted_price_data
+                })
+                ax = plt.gca()
+                df.plot(kind='line', y='real_price', ax=ax)
+                df.plot(kind='line', y='predicted_price', color='red', ax=ax)
+                plt.show()
         # self.train(data=data)
 
     def update_model_from_gradient_dic(self,gradient_dic: dict):
