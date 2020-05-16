@@ -46,7 +46,7 @@ class GradientDescent():
     def fitness(self,model):
         return -((np.sum(self.run_over_data(data=self.data,interval_size=self.interval_size,model=model)) + 1) ** 2)
 
-    def partial_derivative_of_variable(self,result_dic: dict,model: Model.Model,variable,weight_id = None,bias_neuron=None,sense=0.0001):
+    def partial_derivative_of_variable(self,result_dic: dict,model: Model.Model,variable,weight_id = None,bias_neuron=None,sense=0.000001):
         #calculate the data
         #gradient = d_fitness/d_sense
         #neuron is copied, so we do not permantly apply changes to network
