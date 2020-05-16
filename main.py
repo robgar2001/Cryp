@@ -26,7 +26,10 @@ class main(object):
         Logger.Log('Connection succesfull')
         #de userinterface wordt gecheckt
         if sys.argv[1] == 'train':
-            strategy = Strategy.Strategy(symbol=sys.argv[2],binance_client=client,filename=sys.argv[3])
+            learning_rate = 0.001
+            if sys.argv[4]:
+                learning_rate=float(sys.argv[4])
+            strategy = Strategy.Strategy(symbol=sys.argv[2],binance_client=client,filename=sys.argv[3],learning_rate=learning_rate)
         elif sys.argv[1] == 'create':
             config = [int(sys.argv[i]) for i in range(3,len(sys.argv))]
             model = Model.Model()

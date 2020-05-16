@@ -15,7 +15,7 @@ import GradientDescent
 
 
 class Strategy(object):
-    def __init__(self,symbol: str,binance_client : Client ,filename = 'network.model',learning_rate = 0.00001):
+    def __init__(self,symbol: str,binance_client : Client ,filename = 'network.model',learning_rate = 0.001):
         wandb.init(project="cryp")
         self.learning_rate = learning_rate
         self.symbol = symbol
@@ -35,9 +35,7 @@ class Strategy(object):
             gd = GradientDescent.GradientDescent(model=self.model,interval_size=self.model_interval,data=data)
             gradient_updates = gd.start()
             self.update_model_from_gradient_dic(gradient_dic=gradient_updates)
-            self.model.save(fitness=gd.fitness1)
-            if not (i%100):
-
+            if not i%1000:
                 real_price = [x.data for x in data[self.model_interval:-1]]
                 predicted_price_data = self.prediction_run()
 
@@ -49,15 +47,24 @@ class Strategy(object):
                 df.plot(kind='line', y='real_price', ax=ax)
                 df.plot(kind='line', y='predicted_price', color='red', ax=ax)
                 plt.show()
+            self.model.save(fitness=gd.fitness1,filename=filename)
         # self.train(data=data)
 
     def update_model_from_gradient_dic(self,gradient_dic: dict):
+        Logger.Log('Learning-rate: '+str(self.learning_rate))
         for key in gradient_dic.keys():
-            layer,neuron,weight = key
-            if gradient_dic[key]>0:
-                self.model.layers[layer].neurons[neuron].weights[weight]  += -1*self.learning_rate
+            if key[2]!='bias':
+                layer,neuron,weight = key
+                if gradient_dic[key]>0:
+                    self.model.layers[layer].neurons[neuron].weights[weight]  += -1*self.learning_rate
+                else:
+                    self.model.layers[layer].neurons[neuron].weights[weight] += 1*self.learning_rate
             else:
-                self.model.layers[layer].neurons[neuron].weights[weight] += 1*self.learning_rate
+                layer,neuron,_ = key
+                if gradient_dic[key]>0:
+                    self.model.layers[layer].neurons[neuron].bias += -1*self.learning_rate
+                else:
+                    self.model.layers[layer].neurons[neuron].bias += self.learning_rate
         Logger.Log('Updated all weights based of their gradient dict')
     def prediction_run(self):
         result = []

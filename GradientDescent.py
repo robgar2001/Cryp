@@ -17,18 +17,23 @@ class GradientDescent():
         self.interval_size = interval_size
     def start(self):
         self.fitness1 = self.fitness(self.model)
-        Logger.Log('STARTING FITNESS IS: '+str(self.fitness1))
+        Logger.Log('STARTING COST IS: '+str(self.fitness1))
         for l in range(1,len(self.model.layers)):
             for n in range(len(self.model.layers[l].neurons)):
                 for w in range(len(self.model.layers[l].neurons[n].weights)):
-                    self.partial_gradient_threads.append(threading.Thread(target=self.partial_derivative_of_neuron,kwargs={'neuron':self.model.layers[l].neurons[n],'model':copy.deepcopy(self.model),'result_dic':self.gradientDic,'weight_id':w}))
+                    self.partial_gradient_threads.append(threading.Thread(target=self.partial_derivative_of_variable,kwargs={'variable':self.model.layers[l].neurons[n],'model':copy.deepcopy(self.model),'result_dic':self.gradientDic,'weight_id':w}))
                     self.partial_gradient_threads[-1].start()
+                #starting thread to collect bias partial derivative
+                self.partial_gradient_threads.append(threading.Thread(target=self.partial_derivative_of_variable,kwargs={'variable': self.model.layers[l].neurons[n].bias,'model': copy.deepcopy(self.model),'result_dic': self.gradientDic,'bias_neuron':self.model.layers[l].neurons[n]}))
+                self.partial_gradient_threads[-1].start()
+
         Logger.Log('Waiting for threads to join')
         for thread in self.partial_gradient_threads:
             thread.join()
         Logger.Log('Threads finished executing')
         return self.gradientDic
 
+    #this method runs over the data to determine how good the network is performing
     def run_over_data(self, data, interval_size, model):
         afwijkingen = []
         for i in range(len(data) - interval_size-1):
@@ -37,19 +42,28 @@ class GradientDescent():
             afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size])))
         return afwijkingen
 
+    #determins the cost/fitness
     def fitness(self,model):
-        #determine the fitness
         return -((np.sum(self.run_over_data(data=self.data,interval_size=self.interval_size,model=model)) + 1) ** 2)
 
-    def partial_derivative_of_neuron(self,result_dic: dict,model: Model.Model,neuron: Model.Neuron,weight_id:int,sense=0.0001):
+    def partial_derivative_of_variable(self,result_dic: dict,model: Model.Model,variable,weight_id = None,bias_neuron=None,sense=0.0001):
         #calculate the data
         #gradient = d_fitness/d_sense
         #neuron is copied, so we do not permantly apply changes to network
         #this function is heavely multithreaded
-        Logger.Log(threading.current_thread().getName()+' '+str(neuron)+' weight_id: '+str(weight_id))
+        #Logger.Log(threading.current_thread().getName()+' '+str(neuron)+' weight_id: '+str(weight_id))
+
+        #passed variable can be either bias or weight
         fitness1 = self.fitness1
-        model.layers[neuron.layer_id].neurons[neuron.neuron_id].weights[weight_id] += sense
-        fitness2 = self.fitness(model)
-        gradient = (abs(fitness2)-abs(fitness1))/sense
-        result_dic.__setitem__((neuron.layer_id,neuron.neuron_id,weight_id),gradient)
+        if type(variable)==Model.Neuron:
+            model.layers[variable.layer_id].neurons[variable.neuron_id].weights[weight_id] += sense
+            fitness2 = self.fitness(model)
+            gradient = (abs(fitness2)-abs(fitness1))/sense
+            result_dic.__setitem__((variable.layer_id,variable.neuron_id,weight_id),gradient)
+        else:
+            #it must be bias
+            model.layers[bias_neuron.layer_id].neurons[bias_neuron.neuron_id].bias += sense
+            fitness2 = self.fitness(model)
+            gradient = (abs(fitness2) - abs(fitness1)) / sense
+            result_dic.__setitem__((bias_neuron.layer_id,bias_neuron.neuron_id,'bias'),gradient)
         return 0
