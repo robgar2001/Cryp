@@ -5,7 +5,7 @@ from AI import Model
 import Wallet
 import pandas as pd
 import matplotlib.pyplot as plt
-import wandb
+
 import datetime
 import copy
 import sys
@@ -16,7 +16,6 @@ import GradientDescent
 
 class Strategy(object):
     def __init__(self,symbol: str,binance_client : Client ,filename = 'network.model',learning_rate = 0.001):
-        wandb.init(project="cryp")
         self.learning_rate = learning_rate
         self.symbol = symbol
         self.binance_client = binance_client
@@ -47,7 +46,7 @@ class Strategy(object):
                 df.plot(kind='line', y='real_price', ax=ax)
                 df.plot(kind='line', y='predicted_price', color='red', ax=ax)
                 plt.show()
-            self.model.save(fitness=gd.fitness1,filename=filename)
+            self.model.save(cost=gd.fitness1,filename=filename)
         # self.train(data=data)
 
     def update_model_from_gradient_dic(self,gradient_dic: dict):

@@ -3,6 +3,7 @@ import Logger
 import numpy as np
 import numpy.random as random
 import wandb
+import json
 
 class Neuron(object):
     def __init__(self,weights,bias=0,neuron_id = None,layer_id = None):
@@ -86,24 +87,21 @@ class Model(object):
             self.layers[int(data[0])].neurons[int(data[1])].bias = float(data[3])
         file.close()
         return structure,float(lines[1])
-    def save(self,filename='network.model',fitness = -9999999):
-        Logger.Log('saving file')
-        file = open(filename,'w')
+    def save(self,filename='network.model',cost = -9999999):
+        #must be reworked trough json
+        Logger.Log('Saving file to location: %s'%(filename))
+        save_dic = {}
         structure = ''
         for l in self.layers:
             structure+=str(len(l.neurons))+'/'
         structure = structure[:len(structure)-1]
-        file.write(structure+'\n')
-        file.write(str(fitness)+'\n')
+        save_dic.__setitem__('structure',structure)
+        save_dic['cost'] = cost
         for l in self.layers[1:]:
             for n in l.neurons:
-                weights = '['
-                for x in n.weights:
-                    weights+=str(x)+','
-                weights = weights[0:-1]
-                weights+=']'
-                file.write(str(n.layer_id)+'/'+str(n.neuron_id)+'/'+str(weights)+'/'+str(n.bias)+'\n')
-        file.close()
+                save_dic['(%i,%i)'%(n.layer_id,n.neuron_id)] = (n.weights,n.bias)
+        with open(filename,'a') as file:
+            json.dump(save_dic,file,indent=2)
         Logger.Log(filename+' created')
 
 

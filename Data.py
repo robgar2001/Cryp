@@ -40,9 +40,14 @@ class Candle(object):
     def __init__(self,data,id = None):
         self.id = id
         self.data = data
+        #indicators are non price data related and belong with the candle but are not real price data
+        #data must be added in other way to input layer
+        self.indicators = []
     def __str__(self):
         return "Candle id: %i, price: %f"%(self.id,self.data)
     def __float__(self):
         return float(self.data)
     def __abs__(self):
         return abs(self.__float__())
+    def __get_indicators__(self):
+        return self.indicators
