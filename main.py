@@ -15,6 +15,7 @@ class main(object):
         self.client = None
         #de userinterface wordt gecheckt
         if sys.argv[1] == 'train':
+            self.client = self.connect_to_binance_api()
             learning_rate = 0.001
             if sys.argv[4]:
                 learning_rate=float(sys.argv[4])
@@ -34,6 +35,7 @@ class main(object):
         elif sys.argv[1] == 'simulate':
             pass
         elif sys.argv[1] == 'predict':
+            self.client = self.connect_to_binance_api()
             pair = sys.argv[2]
             model_filename = sys.argv[3]
             model = Model.Model()
@@ -54,13 +56,14 @@ class main(object):
         while (True):
             try:
                 Logger.Log('Establishing connection, attempt %i' % (attempt))
-                self.client = Client(api_key='', api_secret='')
+                client = Client(api_key='', api_secret='')
                 break
             except:
                 Logger.Log('Binance api connection attempt %i failed' % (attempt))
                 attempt += 1
                 time.sleep(1)
         Logger.Log('Connection succesfull')
+        return client
 
 #start the program
 start = main()

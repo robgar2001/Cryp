@@ -11,17 +11,41 @@ class DataManager(object):
         Logger.Log('Creating DataManager')
         self.client = client
         self.candles = []
-        raw_data = get_binance_data(binance_client=client,symbol=symbol,klineinterval=klineinterval)
+        data = get_binance_data(binance_client=client,symbol=symbol,klineinterval=klineinterval)
+        raw_data = data[:,4]
         self.raw_data = raw_data
         Logger.Log('Stored price data of %i klines '%(len(raw_data)))
         for i in range(1,len(raw_data)):
-            self+=float(raw_data[i])/float(raw_data[i-1])-1
+            #normalizing the date
+            self+=(float(raw_data[i])/float(raw_data[i-1])-1,data[i])
     def __add__(self, other):
-        candle = Candle(data=other,id=len(self.candles))
+        candle = Candle(data=other[0],id=len(self.candles))
+        indicator_data = other[1]
+        #add other candle data to the candle
+        """
+                1499040000000,      // Open time
+                "0.01634790",       // Open
+                "0.80000000",       // High
+                "0.01575800",       // Low
+                "0.01577100",       // Close
+                "148976.11427815",  // Volume
+                1499644799999,      // Close time
+                "2434.19055334",    // Quote asset volume
+                308,                // Number of trades
+                "1756.87402397",    // Taker buy base asset volume
+                "28.46694368",      // Taker buy quote asset volume
+                "17928899.62484339" // Ignore
+                """
+        indicator_key_list = [None,'open','high','low',None,'volume',None,'quote_asset_volume','number_of_trades','taker_buy_base_asset_volume','taker_buy_quote_asset_volume',None]
+        for i in range(1,len(indicator_data)):
+            if indicator_key_list[i]!=None:
+                candle.indicators[indicator_key_list[i]] = indicator_data[i]
+        print(candle.indicators)
         self.candles.append(candle)
         return self
     def get_data(self):
         return sorted(self.candles,key=lambda x: self.candles[self.candles.index(x)].id)
+
     def reconstruct_raw_data(self,price_change_list:list):
         raw_data = []
         for i in range(len(price_change_list)):
@@ -32,7 +56,7 @@ class DataManager(object):
 def get_binance_data(binance_client,symbol,klineinterval):
     Logger.Log('Getting data from binance servers')
     try:
-        return np.array(binance_client.get_historical_klines(symbol, klineinterval, '28 Januari, 2020', '31 Januari, 2020'))[:,1]
+        return np.array(binance_client.get_historical_klines(symbol, klineinterval, '28 March, 2020'))
     except:
         Logger.Log('FATAL ERROR: could not get klines from binance server')
 
@@ -42,7 +66,8 @@ class Candle(object):
         self.data = data
         #indicators are non price data related and belong with the candle but are not real price data
         #data must be added in other way to input layer
-        self.indicators = []
+        self.indicators = {}
+
     def __str__(self):
         return "Candle id: %i, price: %f"%(self.id,self.data)
     def __float__(self):

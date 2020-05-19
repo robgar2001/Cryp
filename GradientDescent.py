@@ -16,8 +16,8 @@ class GradientDescent():
         self.data = data
         self.interval_size = interval_size
     def start(self):
-        self.fitness1 = self.fitness(self.model)
-        Logger.Log('STARTING COST IS: '+str(self.fitness1))
+        self.cost1 = self.cost(self.model)
+        Logger.Log('STARTING COST IS: '+str(self.cost1))
         for l in range(1,len(self.model.layers)):
             for n in range(len(self.model.layers[l].neurons)):
                 for w in range(len(self.model.layers[l].neurons[n].weights)):
@@ -42,28 +42,28 @@ class GradientDescent():
             afwijkingen.append(abs(abs(model.predict(inputs=data[i:i + interval_size]))-abs(data[i+interval_size])))
         return afwijkingen
 
-    #determins the cost/fitness
-    def fitness(self,model):
-        return -((np.sum(self.run_over_data(data=self.data,interval_size=self.interval_size,model=model)) + 1) ** 2)
+    #determins the cost/cost
+    def cost(self,model):
+        return ((np.sum(self.run_over_data(data=self.data,interval_size=self.interval_size,model=model)) + 1) ** 2)
 
     def partial_derivative_of_variable(self,result_dic: dict,model: Model.Model,variable,weight_id = None,bias_neuron=None,sense=0.000001):
         #calculate the data
-        #gradient = d_fitness/d_sense
+        #gradient = d_cost/d_sense
         #neuron is copied, so we do not permantly apply changes to network
         #this function is heavely multithreaded
         #Logger.Log(threading.current_thread().getName()+' '+str(neuron)+' weight_id: '+str(weight_id))
 
         #passed variable can be either bias or weight
-        fitness1 = self.fitness1
+        cost1 = self.cost1
         if type(variable)==Model.Neuron:
             model.layers[variable.layer_id].neurons[variable.neuron_id].weights[weight_id] += sense
-            fitness2 = self.fitness(model)
-            gradient = (abs(fitness2)-abs(fitness1))/sense
+            cost2 = self.cost(model)
+            gradient = (abs(cost2)-abs(cost1))/sense
             result_dic.__setitem__((variable.layer_id,variable.neuron_id,weight_id),gradient)
         else:
             #it must be bias
             model.layers[bias_neuron.layer_id].neurons[bias_neuron.neuron_id].bias += sense
-            fitness2 = self.fitness(model)
-            gradient = (abs(fitness2) - abs(fitness1)) / sense
+            cost2 = self.cost(model)
+            gradient = (abs(cost2) - abs(cost1)) / sense
             result_dic.__setitem__((bias_neuron.layer_id,bias_neuron.neuron_id,'bias'),gradient)
         return 0

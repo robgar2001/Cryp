@@ -21,7 +21,7 @@ class Layer(object):
         if layer_id!=0:
             self.neurons = [Neuron(neuron_id = i,layer_id=layer_id,weights=[0 for x in range(L_Layers_N_neuron[self.layer_id-1])]) for i in range(N_neurons)]
         else:
-            self.neurons = [Neuron(neuron_id=i, layer_id=layer_id, weights=None)for i in range(N_neurons)]
+            self.neurons = [Neuron(neuron_id=i, layer_id=layer_id, weights=0)for i in range(N_neurons)]
     def weight_matrix(self):
         return np.array([[w for w in neuron.weights] for neuron in self.neurons])
     def bias_matrix(self):
@@ -29,6 +29,15 @@ class Layer(object):
         _,M = biaslist.shape
         return biaslist.reshape((M,1))
 class Model(object):
+    def __get_model_dict__(self):
+        try:
+            model_dict = {}
+            for l in range(1,len(self.layers)):
+                for n in self.layers[l].neurons:
+                    model_dict['(%i,%i)' % (n.layer_id, n.neuron_id)] = [n.weights, n.bias]
+            return model_dict
+        except:
+            Logger.Log('FAILED to create model dictionairy')
     def create_structure(self):
         self.layers = [Layer(L_Layers_N_neuron=self.network_config,N_neurons=self.network_config[i],layer_id=i) for i in range(len(self.network_config))]
     def activation_function(self,value):
@@ -52,42 +61,37 @@ class Model(object):
             values = outputs.copy()
         return values
     def __str__(self):
-        for l in range(0,len(self.layers)):
-            for n in range(len(self.layers[l].neurons)):
-                Logger.Log('Neuron '+str(self.layers[l].neurons[n].neuron_id)+' in layer: '+str(self.layers[l].neurons[n].layer_id)+ ' has weights and bias'+str(self.layers[l].neurons[n].weights)+' bias: ' +str(self.layers[l].neurons[n].bias))
-        return 'MODEL PRINT RESULT'
+        model = self.__get_model_dict__()
+        return json.dumps(model)
     def assign_start_weights(self):
         for l in self.layers[1:]:
             for n in l.neurons:
                 n.weights = random.ranf(len(n.weights)).tolist()
         Logger.Log('Assigned random weights')
+
     def load(self,filename='network.model',load_offset = 2):
         """
         Load a neural network by filename and return the structure and the maxfitness
         """
         Logger.Log('Loading %s'%(filename))
         file = open(filename,'r')
-        lines = file.readlines()
-        structure = lines[0].strip('\n').split('/')
+        data = json.load(file)
+        structure = data['structure'].strip('\n').split('/')
         structure = [int(x) for x in structure]
         self.network_config = structure
         self.create_structure()
-        Logger.Log(structure)
-        for l in range(load_offset,len(lines)):
-            line = lines[l]
-            line = line.strip('\n')
-            data = line.split('/')
-            Logger.Log('Loading in model line: '+str(data))
-            layer = int(data[0])
-            neuron = int(data[1])
-            weightstext = data[2][1:-2]
-            weights = [float(x) for x in weightstext.split(',')]
-            bias = float(data[3])
-            self.layers[int(data[0])].neurons[int(data[1])].weights = weights
-            self.layers[int(data[0])].neurons[int(data[1])].bias = float(data[3])
+        model_data = data['model']
+        for key in model_data.keys():
+            _ = key.replace(')','').replace('(','')
+            _ = _.split(',')
+            layer = int(_[0])
+            neuron = int(_[1])
+            self.layers[layer].neurons[neuron].weights = model_data[key][0]
+            self.layers[layer].neurons[neuron].bias = model_data[key][1]
         file.close()
-        return structure,float(lines[1])
-    def save(self,filename='network.model',cost = -9999999):
+        Logger.Log('Loading file completed')
+        return structure,data['cost']
+    def save(self,filename='network.model',cost = 9999999):
         #must be reworked trough json
         Logger.Log('Saving file to location: %s'%(filename))
         save_dic = {}
@@ -97,10 +101,8 @@ class Model(object):
         structure = structure[:len(structure)-1]
         save_dic.__setitem__('structure',structure)
         save_dic['cost'] = cost
-        for l in self.layers[1:]:
-            for n in l.neurons:
-                save_dic['(%i,%i)'%(n.layer_id,n.neuron_id)] = (n.weights,n.bias)
-        with open(filename,'a') as file:
+        save_dic['model'] = self.__get_model_dict__()
+        with open(filename,'w') as file:
             json.dump(save_dic,file,indent=2)
         Logger.Log(filename+' created')
 

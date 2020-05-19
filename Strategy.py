@@ -28,8 +28,6 @@ class Strategy(object):
         self.datamanager = Data.DataManager(client=binance_client,symbol=symbol,klineinterval=Client.KLINE_INTERVAL_30MINUTE)
         data = self.datamanager.get_data()
         self.data = data
-        for x in data:
-            print(float(x))
         for i in range(1000):
             gd = GradientDescent.GradientDescent(model=self.model,interval_size=self.model_interval,data=data)
             gradient_updates = gd.start()
@@ -46,12 +44,14 @@ class Strategy(object):
                 df.plot(kind='line', y='real_price', ax=ax)
                 df.plot(kind='line', y='predicted_price', color='red', ax=ax)
                 plt.show()
-            self.model.save(cost=gd.fitness1,filename=filename)
+            self.model.save(cost=gd.cost1,filename=filename)
         # self.train(data=data)
 
     def update_model_from_gradient_dic(self,gradient_dic: dict):
+        #update our network based on the gradients recieved by the gradient descent class
         Logger.Log('Learning-rate: '+str(self.learning_rate))
         for key in gradient_dic.keys():
+            #biases must be treated differently
             if key[2]!='bias':
                 layer,neuron,weight = key
                 if gradient_dic[key]>0:
