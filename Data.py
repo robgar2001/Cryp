@@ -7,11 +7,11 @@ class DataManager(object):
     """
     The datamanager class is used as a container to store the incomming kline data and normalize it.
     """
-    def __init__(self,client : Client,symbol : str,klineinterval):
+    def __init__(self,client : Client,symbol : str,klineinterval,start_date,end_date):
         Logger.Log('Creating DataManager')
         self.client = client
         self.candles = []
-        data = get_binance_data(binance_client=client,symbol=symbol,klineinterval=klineinterval)
+        data = get_binance_data(binance_client=client,symbol=symbol,klineinterval=klineinterval,start_date=start_date,end_date=end_date)
         raw_data = data[:,4]
         self.raw_data = raw_data
         Logger.Log('Stored price data of %i klines '%(len(raw_data)))
@@ -47,16 +47,17 @@ class DataManager(object):
         return sorted(self.candles,key=lambda x: self.candles[self.candles.index(x)].id)
 
     def reconstruct_raw_data(self,price_change_list:list):
+        #reconstruct from price change list an actual price list
         raw_data = []
         for i in range(len(price_change_list)):
             raw_data.append(float(self.raw_data[i])*(float(price_change_list[i])+1))
         return raw_data
 
 
-def get_binance_data(binance_client,symbol,klineinterval):
+def get_binance_data(binance_client,symbol,klineinterval,start_date,end_date):
     Logger.Log('Getting data from binance servers')
     try:
-        return np.array(binance_client.get_historical_klines(symbol, klineinterval, '28 March, 2020'))
+        return np.array(binance_client.get_historical_klines(symbol, klineinterval, start_date,end_date))
     except:
         Logger.Log('FATAL ERROR: could not get klines from binance server')
 

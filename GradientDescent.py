@@ -24,8 +24,8 @@ class GradientDescent():
                     self.partial_gradient_threads.append(threading.Thread(target=self.partial_derivative_of_variable,kwargs={'variable':self.model.layers[l].neurons[n],'model':copy.deepcopy(self.model),'result_dic':self.gradientDic,'weight_id':w}))
                     self.partial_gradient_threads[-1].start()
                 #starting thread to collect bias partial derivative
-                self.partial_gradient_threads.append(threading.Thread(target=self.partial_derivative_of_variable,kwargs={'variable': self.model.layers[l].neurons[n].bias,'model': copy.deepcopy(self.model),'result_dic': self.gradientDic,'bias_neuron':self.model.layers[l].neurons[n]}))
-                self.partial_gradient_threads[-1].start()
+                #self.partial_gradient_threads.append(threading.Thread(target=self.partial_derivative_of_variable,kwargs={'variable': self.model.layers[l].neurons[n].bias,'model': copy.deepcopy(self.model),'result_dic': self.gradientDic,'bias_neuron':self.model.layers[l].neurons[n]}))
+                #self.partial_gradient_threads[-1].start()
 
         Logger.Log('Waiting for threads to join')
         for thread in self.partial_gradient_threads:
@@ -44,7 +44,8 @@ class GradientDescent():
 
     #determins the cost/cost
     def cost(self,model):
-        return ((np.sum(self.run_over_data(data=self.data,interval_size=self.interval_size,model=model)) + 1) ** 2)
+        #calculate cost per candle
+        return ((np.sum(self.run_over_data(data=self.data,interval_size=self.interval_size,model=model)) + 1) ** 2)/len(self.data)
 
     def partial_derivative_of_variable(self,result_dic: dict,model: Model.Model,variable,weight_id = None,bias_neuron=None,sense=0.000001):
         #calculate the data

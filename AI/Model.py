@@ -78,6 +78,7 @@ class Model(object):
         data = json.load(file)
         structure = data['structure'].strip('\n').split('/')
         structure = [int(x) for x in structure]
+        self.indicators = data['indicators']
         self.network_config = structure
         self.create_structure()
         model_data = data['model']
@@ -91,7 +92,7 @@ class Model(object):
         file.close()
         Logger.Log('Loading file completed')
         return structure,data['cost']
-    def save(self,filename='network.model',cost = 9999999):
+    def save(self,filename='network.model',cost = 9999999,indicators=None):
         #must be reworked trough json
         Logger.Log('Saving file to location: %s'%(filename))
         save_dic = {}
@@ -101,7 +102,12 @@ class Model(object):
         structure = structure[:len(structure)-1]
         save_dic.__setitem__('structure',structure)
         save_dic['cost'] = cost
+        if indicators:
+            save_dic['indicators'] = indicators
+        else:
+            save_dic['indicators'] = self.indicators
         save_dic['model'] = self.__get_model_dict__()
+
         with open(filename,'w') as file:
             json.dump(save_dic,file,indent=2)
         Logger.Log(filename+' created')
