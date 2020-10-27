@@ -9,7 +9,7 @@ chardet==3.0.4
 click==7.0
 configparser==4.0.2
 constantly==15.1.0
-cryptography==2.8
+cryptography==3.2
 cycler==0.10.0
 dateparser==0.7.2
 docker-pycreds==0.4.0
